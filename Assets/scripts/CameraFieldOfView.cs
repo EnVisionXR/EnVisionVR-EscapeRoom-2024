@@ -413,6 +413,7 @@ public class CameraFieldOfView : MonoBehaviour
 
         if (File.Exists(jsonFilePath))
         {
+            
             string jsonContent = File.ReadAllText(jsonFilePath);
             SceneGraph sceneGraphContent = JsonConvert.DeserializeObject<SceneGraph>(jsonContent);
 
@@ -435,6 +436,11 @@ public class CameraFieldOfView : MonoBehaviour
             Debug.LogError("JSON file not found at path: " + jsonFilePath);
         }
     }
+
+    //private IEnumerator LoadImportanceValuesAsync()
+    //{
+
+    //}
 
     void TraverseSceneGraph(List<SceneGraph> children)
     {

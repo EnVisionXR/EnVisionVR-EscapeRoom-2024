@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
+using System;
 
 // Match user position and orientation to scene description anchors
 
@@ -25,6 +26,9 @@ public class SceneIntroduction : MonoBehaviour
     private string cameraAnchor;
     private SpeechSynthesizer speechSynthesizer;
     private bool SceneDescriptState_;
+
+    // Action handled by EnVisionManager
+    public Action<string> OnLogEventAction;
 
     void Start()
     {
@@ -143,7 +147,8 @@ public class SceneIntroduction : MonoBehaviour
                 prev_diff = (float)difference;
             }
         }
-        Debug.LogError("Matching Camera Anchor:" + cameraAnchor + "Description:" + description);
+        Debug.Log("Matching Camera Anchor:" + cameraAnchor + "Description:" + description);
+        OnLogEventAction?.Invoke(string.Format("anchor_scene_description,\"{0}\",\"{1}\"", cameraAnchor, description));
         await Task.Delay((int)(0));
         SpeechSynthesis.SpeakText(description);
         // Start the speech service

@@ -61,6 +61,8 @@ Material:
     - Vector1_69DC66C: 30
     - Vector1_7500305: 0.02
     - Vector1_A0C096A0: 0.5
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_E3091B1A: {r: 0.52594274, g: 0, b: 1, a: 0}
     - Color_FDA61C50: {r: 0.475418, g: 0.1715023, b: 0.7735849, a: 0}

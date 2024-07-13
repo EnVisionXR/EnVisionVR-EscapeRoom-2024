@@ -8,15 +8,34 @@ public class EnVisionManager : MonoBehaviour
 {
     public GameObject dialogPrefab;
 
-    private Logger logger_;
+    private StudyUIManager studyUI_;
+    private Logger logger_;    
     private int participantId_ = -1;
     private int anchorId_ = -1;
     private string condition_ = "UNSET";
+    private StudyTaskState taskState_ = StudyTaskState.Condition_Start;
+    private bool taskStateUpdated_ = false;
 
+    enum StudyTaskState
+    {
+        Condition_Start,
+        Task1_Pre,
+        Task1_InProgress,
+        Task1_Done,
+        Task2_Pre,
+        Task2_InProgress,
+        Task2_Done,
+        Task3_Pre,
+        Task3_InProgress,
+        Task3_Done,
+        Condition_Complete
+    }
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+        studyUI_ = transform.GetComponentInChildren<StudyUIManager>();
 
         string logFilename = "envision_" + System.DateTime.Now.ToString("yyyy_MMM_dd__hh_mm_ss") + ".log";
         logger_ = new Logger(logFilename);
@@ -30,8 +49,18 @@ public class EnVisionManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
- 
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            taskStateUpdated_ = true;
+        }
+
+        if (taskStateUpdated_)
+        {
+            taskStateUpdated_ = false;
+
+            AdvanceTaskState();
+        }
     }
 
     private void ShowDialog(string text, bool editable, Action<string> onSubmitAction)
@@ -94,8 +123,9 @@ public class EnVisionManager : MonoBehaviour
 
     private IEnumerator ShowOnStartDialog()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(2.0f);
 
+        studyUI_.SetDisplayText("Enter Participant ID (Press <enter> to confirm)");
         ShowDialog("Participant ID:", true, SetParticipantId);
     }
 
@@ -103,6 +133,7 @@ public class EnVisionManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
 
+        studyUI_.SetDisplayText("Enter Anchor ID (Press <enter> to confirm)");
         ShowDialog("Anchor ID:", true, SetAnchoId);
     }
 
@@ -139,6 +170,8 @@ public class EnVisionManager : MonoBehaviour
             GameObject.Find("EnVisionVR").GetComponent<CameraFieldOfView>().OnLogEventAction = LogEvent;
             GameObject.Find("EnVisionVR").GetComponent<ObjectLocalization>().OnLogEventAction = LogEvent;
         }
+
+        studyUI_.SetDisplayText(string.Format("Escape Room Loaded - Condition: {0} (Press <space> to move to Task 1)", condition_));
     }
 
     private IEnumerator LoadEscapeRoomSceneAsync()
@@ -171,5 +204,54 @@ public class EnVisionManager : MonoBehaviour
 
         Debug.Log(logtext);
         logger_.WriteLine(logtext);
+    }
+
+    private void AdvanceTaskState()
+    {
+        taskState_++;
+
+        string displayText = "";
+
+        switch (taskState_)
+        {
+            case StudyTaskState.Task1_Pre:
+                displayText = "Task 1 (Press <space> to indicate Task 1 has started)";
+                break;
+
+            case StudyTaskState.Task1_InProgress:
+                displayText = "Task 1 in progress (Press <space> to mark Task 1 as done)";
+                break;
+
+            case StudyTaskState.Task1_Done:
+                displayText = "Task 1 is done (Press <space> to move to Task 2)";
+                break;
+
+            case StudyTaskState.Task2_Pre:
+                displayText = "Task 2 (Press <space> to indicate Task 2 has started)";
+                break;
+
+            case StudyTaskState.Task2_InProgress:
+                displayText = "Task 2 in progress (Press <space> to mark Task 2 as done)";
+                break;
+
+            case StudyTaskState.Task2_Done:
+                displayText = "Task 2 is done (Press <space> to move to Task 3)";
+                break;
+
+            case StudyTaskState.Task3_Pre:
+                displayText = "Task 3 (Press <space> to indicate Task 3 has started)";
+                break;
+
+            case StudyTaskState.Task3_InProgress:
+                displayText = "Task 3 in progress (Press <space> to mark Task 3 as done)";
+                break;
+
+            case StudyTaskState.Task3_Done:
+                displayText = "Task 3 is done (Press <esc> to quit)";
+                break;
+        }
+
+        studyUI_.SetDisplayText(displayText);
+        LogEvent("task_state_change," + displayText, true);
     }
 }

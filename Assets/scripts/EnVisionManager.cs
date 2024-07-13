@@ -136,6 +136,8 @@ public class EnVisionManager : MonoBehaviour
         {
             GameObject.Find("EnVisionVR").GetComponent<SpeechRecognition>().OnLogEventAction = LogEvent;
             GameObject.Find("EnVisionVR").GetComponent<SceneIntroduction>().OnLogEventAction = LogEvent;
+            GameObject.Find("EnVisionVR").GetComponent<CameraFieldOfView>().OnLogEventAction = LogEvent;
+            GameObject.Find("EnVisionVR").GetComponent<ObjectLocalization>().OnLogEventAction = LogEvent;
         }
     }
 

@@ -169,8 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPrefab: {fileID: 8827472104952735025, guid: 1d3aad42bd9b4de46954a65ac0c74d65,
     type: 3}
-  logTrackingData: 0
-  tdLogInterval: 100
+  logTrackingData: 1
+  tdLogInterval: 0.1
 --- !u!1001 &307666239
 PrefabInstance:
   m_ObjectHideFlags: 0

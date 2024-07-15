@@ -1,0 +1,4657 @@
+{
+  "name": "PracticeScene",
+  "type": "Scene",
+  "children": [
+    {
+      "name": "XR Rig",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        {
+          "type": "UnityEngine.XR.Interaction.Toolkit.XRRig",
+          "m_Camera": "null",
+          "m_OriginBaseGameObject": "XR Rig",
+          "m_CameraFloorOffsetObject": "XR Rig",
+          "m_RequestedTrackingOriginMode": "Floor",
+          "m_CameraYOffset": 0.0,
+          "m_CameraGameObject": "Main Camera"
+        },
+        {
+          "type": "MasterController",
+          "DisableSetupForDebug": false,
+          "StartingPosition": "Origin",
+          "TeleporterParent": "null",
+          "RightTeleportInteractor": "RightHandTeleportation",
+          "LeftTeleportInteractor": "LeftHandTeleportation",
+          "RightDirectInteractor": "RightHand Controller",
+          "LeftDirectInteractor": "LeftHand Controller",
+          "RightTractorBeam": "RightHand Controller",
+          "LeftTractorBeam": "LeftHand Controller"
+        }
+      ],
+      "children": [
+        {
+          "name": "Camera Offset",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "Main Camera",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.Camera",
+                  "m_ClearFlags": "Skybox",
+                  "m_BackGroundColor": null,
+                  "m_projectionMatrixMode": 1,
+                  "m_GateFitMode": 2,
+                  "m_FOVAxisMode": 0,
+                  "m_SensorSize": null,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "m_LensShift": null,
+                  "m_FocalLength": 50.0,
+                  "m_NormalizedViewPortRect": null,
+                  "width": 1.0,
+                  "height": 1.0,
+                  "near clip plane": 0.01,
+                  "far clip plane": 300.0,
+                  "field of view": 60.0,
+                  "orthographic": false,
+                  "orthographic size": 5.0,
+                  "m_Depth": 0.0,
+                  "m_CullingMask": null,
+                  "m_RenderingPath": "Use Graphics Settings",
+                  "m_TargetTexture": "null",
+                  "m_TargetDisplay": 0,
+                  "m_TargetEye": 3,
+                  "m_HDR": true,
+                  "m_AllowMSAA": true,
+                  "m_AllowDynamicResolution": false,
+                  "m_ForceIntoRT": false,
+                  "m_OcclusionCulling": true,
+                  "m_StereoConvergence": 10.0,
+                  "m_StereoSeparation": 0.022
+                },
+                {
+                  "type": "UnityEngine.SpatialTracking.TrackedPoseDriver",
+                  "m_Device": "GenericXRDevice",
+                  "m_PoseSource": "Center",
+                  "m_PoseProviderComponent": "null",
+                  "m_TrackingType": "RotationAndPosition",
+                  "m_UpdateType": "UpdateAndBeforeRender",
+                  "m_UseRelativeTransform": false
+                },
+                {
+                  "type": "UnityEngine.Rendering.Universal.UniversalAdditionalCameraData",
+                  "m_RenderShadows": true,
+                  "m_RequiresDepthTextureOption": "UsePipelineSettings",
+                  "m_RequiresOpaqueTextureOption": "UsePipelineSettings",
+                  "m_CameraType": "Base",
+                  "m_Cameras": null,
+                  "size": null,
+                  "m_RendererIndex": -1,
+                  "m_VolumeLayerMask": null,
+                  "m_VolumeTrigger": "null",
+                  "m_VolumeFrameworkUpdateModeOption": "UsePipelineSettings",
+                  "m_RenderPostProcessing": false,
+                  "m_Antialiasing": "None",
+                  "m_AntialiasingQuality": "High",
+                  "m_StopNaN": false,
+                  "m_Dithering": false,
+                  "m_ClearDepth": true,
+                  "m_AllowXRRendering": true,
+                  "m_RequiresDepthTexture": false,
+                  "m_RequiresColorTexture": false
+                },
+                {
+                  "type": "UnityEngine.AudioListener"
+                }
+              ]
+            },
+            {
+              "name": "LeftHand Controller",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRController",
+                  "m_UpdateTrackingType": "UpdateAndBeforeRender",
+                  "m_EnableInputTracking": true,
+                  "m_EnableInputActions": true,
+                  "m_ModelPrefab": "LeftHandController",
+                  "m_ModelParent": "ModelTransform",
+                  "m_Model": "null",
+                  "m_AnimateModel": true,
+                  "m_ModelSelectTransition": "Selected",
+                  "m_ModelDeSelectTransition": "Deselected",
+                  "m_ControllerNode": "LeftHand",
+                  "m_SelectUsage": "Grip",
+                  "m_ActivateUsage": "Trigger",
+                  "m_UIPressUsage": "Trigger",
+                  "m_AxisToPressThreshold": 0.1,
+                  "m_RotateAnchorLeft": "PrimaryAxis2DLeft",
+                  "m_RotateAnchorRight": "PrimaryAxis2DRight",
+                  "m_MoveObjectIn": "PrimaryAxis2DUp",
+                  "m_MoveObjectOut": "PrimaryAxis2DDown",
+                  "m_DirectionalAnchorRotation": "PrimaryAxis2D",
+                  "m_PoseProvider": "null"
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRDirectInteractor",
+                  "m_InteractionManager": "null",
+                  "m_InteractionLayerMask": null,
+                  "m_InteractionLayers": null,
+                  "m_Bits": -1,
+                  "m_AttachTransform": "AttachPoint",
+                  "m_KeepSelectedTargetValid": true,
+                  "m_DisableVisualsWhenBlockedInGroup": true,
+                  "m_StartingSelectedInteractable": "null",
+                  "m_StartingTargetFilter": "null",
+                  "m_HoverEntered": null,
+                  "m_PersistentCalls": null,
+                  "m_Calls": null,
+                  "size": null,
+                  "m_HoverExited": null,
+                  "m_SelectEntered": null,
+                  "m_SelectExited": null,
+                  "m_StartingHoverFilters": null,
+                  "m_StartingSelectFilters": null,
+                  "m_OnHoverEntered": null,
+                  "m_OnHoverExited": null,
+                  "m_OnSelectEntered": null,
+                  "m_OnSelectExited": null,
+                  "m_SelectActionTrigger": "StateChange",
+                  "m_HideControllerOnSelect": true,
+                  "m_AllowHoveredActivate": false,
+                  "m_TargetPriorityMode": "None",
+                  "m_PlayAudioClipOnSelectEntered": false,
+                  "m_AudioClipForOnSelectEntered": "null",
+                  "m_PlayAudioClipOnSelectExited": false,
+                  "m_AudioClipForOnSelectExited": "null",
+                  "m_PlayAudioClipOnSelectCanceled": false,
+                  "m_AudioClipForOnSelectCanceled": "null",
+                  "m_PlayAudioClipOnHoverEntered": false,
+                  "m_AudioClipForOnHoverEntered": "null",
+                  "m_PlayAudioClipOnHoverExited": false,
+                  "m_AudioClipForOnHoverExited": "null",
+                  "m_PlayAudioClipOnHoverCanceled": false,
+                  "m_AudioClipForOnHoverCanceled": "null",
+                  "m_AllowHoverAudioWhileSelecting": true,
+                  "m_PlayHapticsOnSelectEntered": false,
+                  "m_HapticSelectEnterIntensity": 0.0,
+                  "m_HapticSelectEnterDuration": 0.0,
+                  "m_PlayHapticsOnSelectExited": false,
+                  "m_HapticSelectExitIntensity": 0.0,
+                  "m_HapticSelectExitDuration": 0.0,
+                  "m_PlayHapticsOnSelectCanceled": false,
+                  "m_HapticSelectCancelIntensity": 0.0,
+                  "m_HapticSelectCancelDuration": 0.0,
+                  "m_PlayHapticsOnHoverEntered": false,
+                  "m_HapticHoverEnterIntensity": 0.0,
+                  "m_HapticHoverEnterDuration": 0.0,
+                  "m_PlayHapticsOnHoverExited": false,
+                  "m_HapticHoverExitIntensity": 0.0,
+                  "m_HapticHoverExitDuration": 0.0,
+                  "m_PlayHapticsOnHoverCanceled": false,
+                  "m_HapticHoverCancelIntensity": 0.0,
+                  "m_HapticHoverCancelDuration": 0.0,
+                  "m_AllowHoverHapticsWhileSelecting": true,
+                  "m_ImproveAccuracyWithSphereCollider": false,
+                  "m_PhysicsLayerMask": null,
+                  "m_PhysicsTriggerInteraction": "Ignore"
+                },
+                {
+                  "type": "UnityEngine.SphereCollider",
+                  "m_Material": "null",
+                  "m_IsTrigger": true,
+                  "m_Radius": 0.09,
+                  "m_Center": null,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.05
+                },
+                {
+                  "type": "AlignmentTrigger",
+                  "RequiredMatch": null,
+                  "size": null,
+                  "data": null,
+                  "ExternalAxisMode": "View",
+                  "LocalAxis": null,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0,
+                  "ExternalAxis": null,
+                  "Tolerance": 0.1,
+                  "OnEnterAligned": null,
+                  "m_PersistentCalls": null,
+                  "m_Calls": null,
+                  "m_Target": "LeftHand Controller",
+                  "m_TargetAssemblyTypeName": "",
+                  "m_MethodName": "DisableBeam",
+                  "m_Mode": "Void",
+                  "m_Arguments": null,
+                  "m_ObjectArgument": "null",
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false,
+                  "m_CallState": "RuntimeOnly",
+                  "OnExitAligned": null
+                },
+                {
+                  "type": "MagicTractorBeam",
+                  "BeamRenderer": "Line",
+                  "TargetDistance": 0.05,
+                  "LocalRayAxis": null,
+                  "x": 1.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ],
+              "children": [
+                {
+                  "name": "AttachPoint",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "ModelTransform",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -0.02
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": -1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Line",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": -1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.LineRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Camera Motion Only",
+                      "m_LightProbeUsage": 0,
+                      "m_ReflectionProbeUsage": 0,
+                      "m_RayTracingMode": 0,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": null,
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null",
+                      "m_Positions": null,
+                      "x": -1.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "m_Parameters": null,
+                      "widthMultiplier": 0.02,
+                      "widthCurve": null,
+                      "colorGradient": null,
+                      "numCornerVertices": 4,
+                      "numCapVertices": 3,
+                      "alignment": "View",
+                      "textureMode": "Stretch",
+                      "shadowBias": 0.5,
+                      "generateLightingData": false,
+                      "m_UseWorldSpace": false,
+                      "m_Loop": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "RightHand Controller",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRController",
+                  "m_UpdateTrackingType": "UpdateAndBeforeRender",
+                  "m_EnableInputTracking": true,
+                  "m_EnableInputActions": true,
+                  "m_ModelPrefab": "RightHandController",
+                  "m_ModelParent": "ModelTransform",
+                  "m_Model": "null",
+                  "m_AnimateModel": true,
+                  "m_ModelSelectTransition": "Selected",
+                  "m_ModelDeSelectTransition": "Deselected",
+                  "m_ControllerNode": "RightHand",
+                  "m_SelectUsage": "Grip",
+                  "m_ActivateUsage": "Trigger",
+                  "m_UIPressUsage": "Trigger",
+                  "m_AxisToPressThreshold": 0.1,
+                  "m_RotateAnchorLeft": "PrimaryAxis2DLeft",
+                  "m_RotateAnchorRight": "PrimaryAxis2DRight",
+                  "m_MoveObjectIn": "PrimaryAxis2DUp",
+                  "m_MoveObjectOut": "PrimaryAxis2DDown",
+                  "m_DirectionalAnchorRotation": "PrimaryAxis2D",
+                  "m_PoseProvider": "null"
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRDirectInteractor",
+                  "m_InteractionManager": "null",
+                  "m_InteractionLayerMask": null,
+                  "m_InteractionLayers": null,
+                  "m_Bits": -1,
+                  "m_AttachTransform": "AttachPoint",
+                  "m_KeepSelectedTargetValid": true,
+                  "m_DisableVisualsWhenBlockedInGroup": true,
+                  "m_StartingSelectedInteractable": "null",
+                  "m_StartingTargetFilter": "null",
+                  "m_HoverEntered": null,
+                  "m_PersistentCalls": null,
+                  "m_Calls": null,
+                  "size": null,
+                  "m_HoverExited": null,
+                  "m_SelectEntered": null,
+                  "data": null,
+                  "m_Target": "null",
+                  "m_TargetAssemblyTypeName": "",
+                  "m_MethodName": "SetActive",
+                  "m_Mode": "Bool",
+                  "m_Arguments": null,
+                  "m_ObjectArgument": "null",
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": true,
+                  "m_CallState": "RuntimeOnly",
+                  "m_SelectExited": null,
+                  "m_StartingHoverFilters": null,
+                  "m_StartingSelectFilters": null,
+                  "m_OnHoverEntered": null,
+                  "m_OnHoverExited": null,
+                  "m_OnSelectEntered": null,
+                  "m_OnSelectExited": null,
+                  "m_SelectActionTrigger": "StateChange",
+                  "m_HideControllerOnSelect": true,
+                  "m_AllowHoveredActivate": false,
+                  "m_TargetPriorityMode": "None",
+                  "m_PlayAudioClipOnSelectEntered": false,
+                  "m_AudioClipForOnSelectEntered": "null",
+                  "m_PlayAudioClipOnSelectExited": false,
+                  "m_AudioClipForOnSelectExited": "null",
+                  "m_PlayAudioClipOnSelectCanceled": false,
+                  "m_AudioClipForOnSelectCanceled": "null",
+                  "m_PlayAudioClipOnHoverEntered": false,
+                  "m_AudioClipForOnHoverEntered": "null",
+                  "m_PlayAudioClipOnHoverExited": false,
+                  "m_AudioClipForOnHoverExited": "null",
+                  "m_PlayAudioClipOnHoverCanceled": false,
+                  "m_AudioClipForOnHoverCanceled": "null",
+                  "m_AllowHoverAudioWhileSelecting": true,
+                  "m_PlayHapticsOnSelectEntered": false,
+                  "m_HapticSelectEnterIntensity": 0.0,
+                  "m_HapticSelectEnterDuration": 0.0,
+                  "m_PlayHapticsOnSelectExited": false,
+                  "m_HapticSelectExitIntensity": 0.0,
+                  "m_HapticSelectExitDuration": 0.0,
+                  "m_PlayHapticsOnSelectCanceled": false,
+                  "m_HapticSelectCancelIntensity": 0.0,
+                  "m_HapticSelectCancelDuration": 0.0,
+                  "m_PlayHapticsOnHoverEntered": false,
+                  "m_HapticHoverEnterIntensity": 0.0,
+                  "m_HapticHoverEnterDuration": 0.0,
+                  "m_PlayHapticsOnHoverExited": false,
+                  "m_HapticHoverExitIntensity": 0.0,
+                  "m_HapticHoverExitDuration": 0.0,
+                  "m_PlayHapticsOnHoverCanceled": false,
+                  "m_HapticHoverCancelIntensity": 0.0,
+                  "m_HapticHoverCancelDuration": 0.0,
+                  "m_AllowHoverHapticsWhileSelecting": true,
+                  "m_ImproveAccuracyWithSphereCollider": false,
+                  "m_PhysicsLayerMask": null,
+                  "m_PhysicsTriggerInteraction": "Ignore"
+                },
+                {
+                  "type": "UnityEngine.SphereCollider",
+                  "m_Material": "null",
+                  "m_IsTrigger": true,
+                  "m_Radius": 0.09,
+                  "m_Center": null,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.05
+                },
+                {
+                  "type": "AlignmentTrigger",
+                  "RequiredMatch": null,
+                  "size": null,
+                  "data": null,
+                  "ExternalAxisMode": "View",
+                  "LocalAxis": null,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0,
+                  "ExternalAxis": null,
+                  "Tolerance": 0.1,
+                  "OnEnterAligned": null,
+                  "m_PersistentCalls": null,
+                  "m_Calls": null,
+                  "m_Target": "RightHand Controller",
+                  "m_TargetAssemblyTypeName": "",
+                  "m_MethodName": "DisableBeam",
+                  "m_Mode": "Void",
+                  "m_Arguments": null,
+                  "m_ObjectArgument": "null",
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false,
+                  "m_CallState": "RuntimeOnly",
+                  "OnExitAligned": null
+                },
+                {
+                  "type": "MagicTractorBeam",
+                  "BeamRenderer": "Line",
+                  "TargetDistance": 0.05,
+                  "LocalRayAxis": null,
+                  "x": -1.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ],
+              "children": [
+                {
+                  "name": "AttachPoint",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "ModelTransform",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -0.02
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Line",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.LineRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Camera Motion Only",
+                      "m_LightProbeUsage": 0,
+                      "m_ReflectionProbeUsage": 0,
+                      "m_RayTracingMode": 0,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": null,
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null",
+                      "m_Positions": null,
+                      "x": -1.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "m_Parameters": null,
+                      "widthMultiplier": 0.02,
+                      "widthCurve": null,
+                      "colorGradient": null,
+                      "numCornerVertices": 4,
+                      "numCapVertices": 3,
+                      "alignment": "View",
+                      "textureMode": "Stretch",
+                      "shadowBias": 0.5,
+                      "generateLightingData": false,
+                      "m_UseWorldSpace": false,
+                      "m_Loop": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "RightHandTeleportation",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "XRReleaseController",
+                  "m_UpdateTrackingType": "UpdateAndBeforeRender",
+                  "m_EnableInputTracking": true,
+                  "m_EnableInputActions": false,
+                  "m_ModelPrefab": "null",
+                  "m_ModelParent": "null",
+                  "m_Model": "null",
+                  "m_AnimateModel": false,
+                  "m_ModelSelectTransition": "",
+                  "m_ModelDeSelectTransition": "",
+                  "m_ControllerNode": "RightHand",
+                  "m_SelectUsage": "Grip",
+                  "m_ActivateUsage": "Trigger",
+                  "m_UIPressUsage": "Trigger",
+                  "m_AxisToPressThreshold": 0.1,
+                  "m_RotateAnchorLeft": "PrimaryAxis2DLeft",
+                  "m_RotateAnchorRight": "PrimaryAxis2DRight",
+                  "m_MoveObjectIn": "PrimaryAxis2DUp",
+                  "m_MoveObjectOut": "PrimaryAxis2DDown",
+                  "m_DirectionalAnchorRotation": "PrimaryAxis2D",
+                  "m_PoseProvider": "null"
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRRayInteractor",
+                  "m_InteractionManager": "null",
+                  "m_InteractionLayerMask": null,
+                  "m_InteractionLayers": null,
+                  "m_Bits": -1,
+                  "m_AttachTransform": "StartPoint",
+                  "m_KeepSelectedTargetValid": true,
+                  "m_DisableVisualsWhenBlockedInGroup": true,
+                  "m_StartingSelectedInteractable": "null",
+                  "m_StartingTargetFilter": "null",
+                  "m_HoverEntered": null,
+                  "m_PersistentCalls": null,
+                  "m_Calls": null,
+                  "size": null,
+                  "m_HoverExited": null,
+                  "m_SelectEntered": null,
+                  "m_SelectExited": null,
+                  "m_StartingHoverFilters": null,
+                  "m_StartingSelectFilters": null,
+                  "m_OnHoverEntered": null,
+                  "m_OnHoverExited": null,
+                  "m_OnSelectEntered": null,
+                  "m_OnSelectExited": null,
+                  "m_SelectActionTrigger": "StateChange",
+                  "m_HideControllerOnSelect": false,
+                  "m_AllowHoveredActivate": false,
+                  "m_TargetPriorityMode": "None",
+                  "m_PlayAudioClipOnSelectEntered": false,
+                  "m_AudioClipForOnSelectEntered": "null",
+                  "m_PlayAudioClipOnSelectExited": false,
+                  "m_AudioClipForOnSelectExited": "null",
+                  "m_PlayAudioClipOnSelectCanceled": false,
+                  "m_AudioClipForOnSelectCanceled": "null",
+                  "m_PlayAudioClipOnHoverEntered": false,
+                  "m_AudioClipForOnHoverEntered": "null",
+                  "m_PlayAudioClipOnHoverExited": false,
+                  "m_AudioClipForOnHoverExited": "null",
+                  "m_PlayAudioClipOnHoverCanceled": false,
+                  "m_AudioClipForOnHoverCanceled": "null",
+                  "m_AllowHoverAudioWhileSelecting": true,
+                  "m_PlayHapticsOnSelectEntered": false,
+                  "m_HapticSelectEnterIntensity": 0.0,
+                  "m_HapticSelectEnterDuration": 0.0,
+                  "m_PlayHapticsOnSelectExited": false,
+                  "m_HapticSelectExitIntensity": 0.0,
+                  "m_HapticSelectExitDuration": 0.0,
+                  "m_PlayHapticsOnSelectCanceled": false,
+                  "m_HapticSelectCancelIntensity": 0.0,
+                  "m_HapticSelectCancelDuration": 0.0,
+                  "m_PlayHapticsOnHoverEntered": false,
+                  "m_HapticHoverEnterIntensity": 0.0,
+                  "m_HapticHoverEnterDuration": 0.0,
+                  "m_PlayHapticsOnHoverExited": false,
+                  "m_HapticHoverExitIntensity": 0.0,
+                  "m_HapticHoverExitDuration": 0.0,
+                  "m_PlayHapticsOnHoverCanceled": false,
+                  "m_HapticHoverCancelIntensity": 0.0,
+                  "m_HapticHoverCancelDuration": 0.0,
+                  "m_AllowHoverHapticsWhileSelecting": true,
+                  "m_LineType": "ProjectileCurve",
+                  "m_BlendVisualLinePoints": true,
+                  "m_MaxRaycastDistance": 30.0,
+                  "m_RayOriginTransform": "null",
+                  "m_ReferenceFrame": "null",
+                  "m_Velocity": 16.0,
+                  "m_Acceleration": 9.8,
+                  "m_AdditionalGroundHeight": 0.1,
+                  "m_AdditionalFlightTime": 0.5,
+                  "m_EndPointDistance": 30.0,
+                  "m_EndPointHeight": -10.0,
+                  "m_ControlPointDistance": 10.0,
+                  "m_ControlPointHeight": 5.0,
+                  "m_SampleFrequency": 20,
+                  "m_HitDetectionType": "Raycast",
+                  "m_SphereCastRadius": 0.0,
+                  "m_ConeCastAngle": 6.0,
+                  "m_RaycastMask": null,
+                  "m_RaycastTriggerInteraction": "Ignore",
+                  "m_RaycastSnapVolumeInteraction": "Collide",
+                  "m_HitClosestOnly": false,
+                  "m_HoverToSelect": false,
+                  "m_HoverTimeToSelect": 0.5,
+                  "m_AutoDeselect": false,
+                  "m_TimeToAutoDeselect": 3.0,
+                  "m_EnableUIInteraction": true,
+                  "m_BlockUIOnInteractableSelection": true,
+                  "m_AllowAnchorControl": true,
+                  "m_UseForceGrab": true,
+                  "m_RotateSpeed": 180.0,
+                  "m_TranslateSpeed": 1.0,
+                  "m_AnchorRotateReferenceFrame": "null",
+                  "m_AnchorRotationMode": "RotateOverTime",
+                  "m_UIHoverEntered": null,
+                  "m_UIHoverExited": null,
+                  "m_EnableARRaycasting": false,
+                  "m_OccludeARHitsWith3DObjects": false,
+                  "m_OccludeARHitsWith2DObjects": false,
+                  "m_ScaleMode": "None"
+                },
+                {
+                  "type": "UnityEngine.LineRenderer",
+                  "m_CastShadows": "On",
+                  "m_ReceiveShadows": true,
+                  "m_DynamicOccludee": true,
+                  "m_StaticShadowCaster": false,
+                  "m_MotionVectors": "Camera Motion Only",
+                  "m_LightProbeUsage": 0,
+                  "m_ReflectionProbeUsage": 0,
+                  "m_RayTracingMode": 0,
+                  "m_RayTraceProcedural": false,
+                  "m_RenderingLayerMask": 1,
+                  "m_RendererPriority": 0,
+                  "m_Materials": null,
+                  "size": null,
+                  "data": "LineMat",
+                  "m_ProbeAnchor": "null",
+                  "m_LightProbeVolumeOverride": "null",
+                  "m_LightmapParameters": "null",
+                  "m_Positions": null,
+                  "m_Parameters": null,
+                  "widthMultiplier": 0.05,
+                  "widthCurve": null,
+                  "colorGradient": null,
+                  "numCornerVertices": 0,
+                  "numCapVertices": 0,
+                  "alignment": "View",
+                  "textureMode": "DistributePerSegment",
+                  "shadowBias": 0.5,
+                  "generateLightingData": false,
+                  "m_UseWorldSpace": true,
+                  "m_Loop": false
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRInteractorLineVisual",
+                  "m_LineWidth": 0.05,
+                  "m_OverrideInteractorLineLength": true,
+                  "m_LineLength": 10.0,
+                  "m_AutoAdjustLineLength": false,
+                  "m_MinLineLength": 0.5,
+                  "m_UseDistanceToHitAsMaxLineLength": true,
+                  "m_LineRetractionDelay": 0.5,
+                  "m_LineLengthChangeSpeed": 12.0,
+                  "m_WidthCurve": null,
+                  "m_SetLineColorGradient": true,
+                  "m_ValidColorGradient": null,
+                  "m_InvalidColorGradient": null,
+                  "m_BlockedColorGradient": null,
+                  "m_TreatSelectionAsValidState": false,
+                  "m_SmoothMovement": true,
+                  "m_FollowTightness": 10.0,
+                  "m_SnapThresholdDistance": 10.0,
+                  "m_Reticle": "TeleportReticle",
+                  "m_BlockedReticle": "null",
+                  "m_StopLineAtFirstRaycastHit": true,
+                  "m_StopLineAtSelection": false,
+                  "m_SnapEndpointIfAvailable": true,
+                  "m_LineBendRatio": 0.5,
+                  "m_OverrideInteractorLineOrigin": true,
+                  "m_LineOriginTransform": "null",
+                  "m_LineOriginOffset": 0.0
+                }
+              ],
+              "children": [
+                {
+                  "name": "StartPoint",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.03,
+                        "y": 0.02,
+                        "z": 0.07
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "LeftHandTeleportation",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "XRReleaseController",
+                  "m_UpdateTrackingType": "UpdateAndBeforeRender",
+                  "m_EnableInputTracking": true,
+                  "m_EnableInputActions": false,
+                  "m_ModelPrefab": "null",
+                  "m_ModelParent": "null",
+                  "m_Model": "null",
+                  "m_AnimateModel": false,
+                  "m_ModelSelectTransition": "",
+                  "m_ModelDeSelectTransition": "",
+                  "m_ControllerNode": "LeftHand",
+                  "m_SelectUsage": "Grip",
+                  "m_ActivateUsage": "Trigger",
+                  "m_UIPressUsage": "Trigger",
+                  "m_AxisToPressThreshold": 0.1,
+                  "m_RotateAnchorLeft": "PrimaryAxis2DLeft",
+                  "m_RotateAnchorRight": "PrimaryAxis2DRight",
+                  "m_MoveObjectIn": "PrimaryAxis2DUp",
+                  "m_MoveObjectOut": "PrimaryAxis2DDown",
+                  "m_DirectionalAnchorRotation": "PrimaryAxis2D",
+                  "m_PoseProvider": "null"
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRRayInteractor",
+                  "m_InteractionManager": "null",
+                  "m_InteractionLayerMask": null,
+                  "m_InteractionLayers": null,
+                  "m_Bits": -1,
+                  "m_AttachTransform": "StartPoint",
+                  "m_KeepSelectedTargetValid": true,
+                  "m_DisableVisualsWhenBlockedInGroup": true,
+                  "m_StartingSelectedInteractable": "null",
+                  "m_StartingTargetFilter": "null",
+                  "m_HoverEntered": null,
+                  "m_PersistentCalls": null,
+                  "m_Calls": null,
+                  "size": null,
+                  "m_HoverExited": null,
+                  "m_SelectEntered": null,
+                  "m_SelectExited": null,
+                  "m_StartingHoverFilters": null,
+                  "m_StartingSelectFilters": null,
+                  "m_OnHoverEntered": null,
+                  "m_OnHoverExited": null,
+                  "m_OnSelectEntered": null,
+                  "m_OnSelectExited": null,
+                  "m_SelectActionTrigger": "StateChange",
+                  "m_HideControllerOnSelect": false,
+                  "m_AllowHoveredActivate": false,
+                  "m_TargetPriorityMode": "None",
+                  "m_PlayAudioClipOnSelectEntered": false,
+                  "m_AudioClipForOnSelectEntered": "null",
+                  "m_PlayAudioClipOnSelectExited": false,
+                  "m_AudioClipForOnSelectExited": "null",
+                  "m_PlayAudioClipOnSelectCanceled": false,
+                  "m_AudioClipForOnSelectCanceled": "null",
+                  "m_PlayAudioClipOnHoverEntered": false,
+                  "m_AudioClipForOnHoverEntered": "null",
+                  "m_PlayAudioClipOnHoverExited": false,
+                  "m_AudioClipForOnHoverExited": "null",
+                  "m_PlayAudioClipOnHoverCanceled": false,
+                  "m_AudioClipForOnHoverCanceled": "null",
+                  "m_AllowHoverAudioWhileSelecting": true,
+                  "m_PlayHapticsOnSelectEntered": false,
+                  "m_HapticSelectEnterIntensity": 0.0,
+                  "m_HapticSelectEnterDuration": 0.0,
+                  "m_PlayHapticsOnSelectExited": false,
+                  "m_HapticSelectExitIntensity": 0.0,
+                  "m_HapticSelectExitDuration": 0.0,
+                  "m_PlayHapticsOnSelectCanceled": false,
+                  "m_HapticSelectCancelIntensity": 0.0,
+                  "m_HapticSelectCancelDuration": 0.0,
+                  "m_PlayHapticsOnHoverEntered": false,
+                  "m_HapticHoverEnterIntensity": 0.0,
+                  "m_HapticHoverEnterDuration": 0.0,
+                  "m_PlayHapticsOnHoverExited": false,
+                  "m_HapticHoverExitIntensity": 0.0,
+                  "m_HapticHoverExitDuration": 0.0,
+                  "m_PlayHapticsOnHoverCanceled": false,
+                  "m_HapticHoverCancelIntensity": 0.0,
+                  "m_HapticHoverCancelDuration": 0.0,
+                  "m_AllowHoverHapticsWhileSelecting": true,
+                  "m_LineType": "ProjectileCurve",
+                  "m_BlendVisualLinePoints": true,
+                  "m_MaxRaycastDistance": 30.0,
+                  "m_RayOriginTransform": "null",
+                  "m_ReferenceFrame": "null",
+                  "m_Velocity": 16.0,
+                  "m_Acceleration": 9.8,
+                  "m_AdditionalGroundHeight": 0.1,
+                  "m_AdditionalFlightTime": 0.5,
+                  "m_EndPointDistance": 30.0,
+                  "m_EndPointHeight": -10.0,
+                  "m_ControlPointDistance": 10.0,
+                  "m_ControlPointHeight": 5.0,
+                  "m_SampleFrequency": 20,
+                  "m_HitDetectionType": "Raycast",
+                  "m_SphereCastRadius": 0.0,
+                  "m_ConeCastAngle": 6.0,
+                  "m_RaycastMask": null,
+                  "m_RaycastTriggerInteraction": "Ignore",
+                  "m_RaycastSnapVolumeInteraction": "Collide",
+                  "m_HitClosestOnly": false,
+                  "m_HoverToSelect": false,
+                  "m_HoverTimeToSelect": 0.5,
+                  "m_AutoDeselect": false,
+                  "m_TimeToAutoDeselect": 3.0,
+                  "m_EnableUIInteraction": true,
+                  "m_BlockUIOnInteractableSelection": true,
+                  "m_AllowAnchorControl": true,
+                  "m_UseForceGrab": true,
+                  "m_RotateSpeed": 180.0,
+                  "m_TranslateSpeed": 1.0,
+                  "m_AnchorRotateReferenceFrame": "null",
+                  "m_AnchorRotationMode": "RotateOverTime",
+                  "m_UIHoverEntered": null,
+                  "m_UIHoverExited": null,
+                  "m_EnableARRaycasting": false,
+                  "m_OccludeARHitsWith3DObjects": false,
+                  "m_OccludeARHitsWith2DObjects": false,
+                  "m_ScaleMode": "None"
+                },
+                {
+                  "type": "UnityEngine.LineRenderer",
+                  "m_CastShadows": "On",
+                  "m_ReceiveShadows": true,
+                  "m_DynamicOccludee": true,
+                  "m_StaticShadowCaster": false,
+                  "m_MotionVectors": "Camera Motion Only",
+                  "m_LightProbeUsage": 0,
+                  "m_ReflectionProbeUsage": 0,
+                  "m_RayTracingMode": 0,
+                  "m_RayTraceProcedural": false,
+                  "m_RenderingLayerMask": 1,
+                  "m_RendererPriority": 0,
+                  "m_Materials": null,
+                  "size": null,
+                  "data": "LineMat",
+                  "m_ProbeAnchor": "null",
+                  "m_LightProbeVolumeOverride": "null",
+                  "m_LightmapParameters": "null",
+                  "m_Positions": null,
+                  "m_Parameters": null,
+                  "widthMultiplier": 0.05,
+                  "widthCurve": null,
+                  "colorGradient": null,
+                  "numCornerVertices": 0,
+                  "numCapVertices": 0,
+                  "alignment": "View",
+                  "textureMode": "DistributePerSegment",
+                  "shadowBias": 0.5,
+                  "generateLightingData": false,
+                  "m_UseWorldSpace": true,
+                  "m_Loop": false
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRInteractorLineVisual",
+                  "m_LineWidth": 0.05,
+                  "m_OverrideInteractorLineLength": true,
+                  "m_LineLength": 10.0,
+                  "m_AutoAdjustLineLength": false,
+                  "m_MinLineLength": 0.5,
+                  "m_UseDistanceToHitAsMaxLineLength": true,
+                  "m_LineRetractionDelay": 0.5,
+                  "m_LineLengthChangeSpeed": 12.0,
+                  "m_WidthCurve": null,
+                  "m_SetLineColorGradient": true,
+                  "m_ValidColorGradient": null,
+                  "m_InvalidColorGradient": null,
+                  "m_BlockedColorGradient": null,
+                  "m_TreatSelectionAsValidState": false,
+                  "m_SmoothMovement": true,
+                  "m_FollowTightness": 10.0,
+                  "m_SnapThresholdDistance": 10.0,
+                  "m_Reticle": "TeleportReticle",
+                  "m_BlockedReticle": "null",
+                  "m_StopLineAtFirstRaycastHit": true,
+                  "m_StopLineAtSelection": false,
+                  "m_SnapEndpointIfAvailable": true,
+                  "m_LineBendRatio": 0.5,
+                  "m_OverrideInteractorLineOrigin": true,
+                  "m_LineOriginTransform": "null",
+                  "m_LineOriginOffset": 0.0
+                }
+              ],
+              "children": [
+                {
+                  "name": "StartPoint",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.04,
+                        "y": 0.01999998,
+                        "z": -0.03
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "LeftUIInteractor",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRController",
+                  "m_UpdateTrackingType": "UpdateAndBeforeRender",
+                  "m_EnableInputTracking": true,
+                  "m_EnableInputActions": true,
+                  "m_ModelPrefab": "null",
+                  "m_ModelParent": "null",
+                  "m_Model": "null",
+                  "m_AnimateModel": false,
+                  "m_ModelSelectTransition": "",
+                  "m_ModelDeSelectTransition": "",
+                  "m_ControllerNode": "LeftHand",
+                  "m_SelectUsage": "Grip",
+                  "m_ActivateUsage": "Trigger",
+                  "m_UIPressUsage": "Trigger",
+                  "m_AxisToPressThreshold": 0.1,
+                  "m_RotateAnchorLeft": "PrimaryAxis2DLeft",
+                  "m_RotateAnchorRight": "PrimaryAxis2DRight",
+                  "m_MoveObjectIn": "PrimaryAxis2DUp",
+                  "m_MoveObjectOut": "PrimaryAxis2DDown",
+                  "m_DirectionalAnchorRotation": "PrimaryAxis2D",
+                  "m_PoseProvider": "null"
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRRayInteractor",
+                  "m_InteractionManager": "null",
+                  "m_InteractionLayerMask": null,
+                  "m_InteractionLayers": null,
+                  "m_Bits": -1,
+                  "m_AttachTransform": "AttachPoint",
+                  "m_KeepSelectedTargetValid": true,
+                  "m_DisableVisualsWhenBlockedInGroup": true,
+                  "m_StartingSelectedInteractable": "null",
+                  "m_StartingTargetFilter": "null",
+                  "m_HoverEntered": null,
+                  "m_PersistentCalls": null,
+                  "m_Calls": null,
+                  "size": null,
+                  "m_HoverExited": null,
+                  "m_SelectEntered": null,
+                  "m_SelectExited": null,
+                  "m_StartingHoverFilters": null,
+                  "m_StartingSelectFilters": null,
+                  "m_OnHoverEntered": null,
+                  "m_OnHoverExited": null,
+                  "m_OnSelectEntered": null,
+                  "m_OnSelectExited": null,
+                  "m_SelectActionTrigger": "StateChange",
+                  "m_HideControllerOnSelect": false,
+                  "m_AllowHoveredActivate": false,
+                  "m_TargetPriorityMode": "None",
+                  "m_PlayAudioClipOnSelectEntered": false,
+                  "m_AudioClipForOnSelectEntered": "null",
+                  "m_PlayAudioClipOnSelectExited": false,
+                  "m_AudioClipForOnSelectExited": "null",
+                  "m_PlayAudioClipOnSelectCanceled": false,
+                  "m_AudioClipForOnSelectCanceled": "null",
+                  "m_PlayAudioClipOnHoverEntered": false,
+                  "m_AudioClipForOnHoverEntered": "null",
+                  "m_PlayAudioClipOnHoverExited": false,
+                  "m_AudioClipForOnHoverExited": "null",
+                  "m_PlayAudioClipOnHoverCanceled": false,
+                  "m_AudioClipForOnHoverCanceled": "null",
+                  "m_AllowHoverAudioWhileSelecting": true,
+                  "m_PlayHapticsOnSelectEntered": false,
+                  "m_HapticSelectEnterIntensity": 0.0,
+                  "m_HapticSelectEnterDuration": 0.0,
+                  "m_PlayHapticsOnSelectExited": false,
+                  "m_HapticSelectExitIntensity": 0.0,
+                  "m_HapticSelectExitDuration": 0.0,
+                  "m_PlayHapticsOnSelectCanceled": false,
+                  "m_HapticSelectCancelIntensity": 0.0,
+                  "m_HapticSelectCancelDuration": 0.0,
+                  "m_PlayHapticsOnHoverEntered": false,
+                  "m_HapticHoverEnterIntensity": 0.0,
+                  "m_HapticHoverEnterDuration": 0.0,
+                  "m_PlayHapticsOnHoverExited": false,
+                  "m_HapticHoverExitIntensity": 0.0,
+                  "m_HapticHoverExitDuration": 0.0,
+                  "m_PlayHapticsOnHoverCanceled": false,
+                  "m_HapticHoverCancelIntensity": 0.0,
+                  "m_HapticHoverCancelDuration": 0.0,
+                  "m_AllowHoverHapticsWhileSelecting": true,
+                  "m_LineType": "StraightLine",
+                  "m_BlendVisualLinePoints": true,
+                  "m_MaxRaycastDistance": 0.1,
+                  "m_RayOriginTransform": "null",
+                  "m_ReferenceFrame": "null",
+                  "m_Velocity": 16.0,
+                  "m_Acceleration": 9.8,
+                  "m_AdditionalGroundHeight": 0.1,
+                  "m_AdditionalFlightTime": 0.5,
+                  "m_EndPointDistance": 30.0,
+                  "m_EndPointHeight": -10.0,
+                  "m_ControlPointDistance": 10.0,
+                  "m_ControlPointHeight": 5.0,
+                  "m_SampleFrequency": 20,
+                  "m_HitDetectionType": "Raycast",
+                  "m_SphereCastRadius": 0.02,
+                  "m_ConeCastAngle": 6.0,
+                  "m_RaycastMask": null,
+                  "m_RaycastTriggerInteraction": "Ignore",
+                  "m_RaycastSnapVolumeInteraction": "Collide",
+                  "m_HitClosestOnly": false,
+                  "m_HoverToSelect": false,
+                  "m_HoverTimeToSelect": 0.5,
+                  "m_AutoDeselect": false,
+                  "m_TimeToAutoDeselect": 3.0,
+                  "m_EnableUIInteraction": true,
+                  "m_BlockUIOnInteractableSelection": true,
+                  "m_AllowAnchorControl": true,
+                  "m_UseForceGrab": true,
+                  "m_RotateSpeed": 180.0,
+                  "m_TranslateSpeed": 1.0,
+                  "m_AnchorRotateReferenceFrame": "null",
+                  "m_AnchorRotationMode": "RotateOverTime",
+                  "m_UIHoverEntered": null,
+                  "m_UIHoverExited": null,
+                  "m_EnableARRaycasting": false,
+                  "m_OccludeARHitsWith3DObjects": false,
+                  "m_OccludeARHitsWith2DObjects": false,
+                  "m_ScaleMode": "None"
+                },
+                {
+                  "type": "UnityEngine.LineRenderer",
+                  "m_CastShadows": "On",
+                  "m_ReceiveShadows": true,
+                  "m_DynamicOccludee": true,
+                  "m_StaticShadowCaster": false,
+                  "m_MotionVectors": "Camera Motion Only",
+                  "m_LightProbeUsage": 0,
+                  "m_ReflectionProbeUsage": 0,
+                  "m_RayTracingMode": 0,
+                  "m_RayTraceProcedural": false,
+                  "m_RenderingLayerMask": 1,
+                  "m_RendererPriority": 0,
+                  "m_Materials": null,
+                  "size": null,
+                  "data": "Default-Line",
+                  "m_ProbeAnchor": "null",
+                  "m_LightProbeVolumeOverride": "null",
+                  "m_LightmapParameters": "null",
+                  "m_Positions": null,
+                  "m_Parameters": null,
+                  "widthMultiplier": 0.02,
+                  "widthCurve": null,
+                  "colorGradient": null,
+                  "numCornerVertices": 0,
+                  "numCapVertices": 0,
+                  "alignment": "View",
+                  "textureMode": "Stretch",
+                  "shadowBias": 0.5,
+                  "generateLightingData": false,
+                  "m_UseWorldSpace": true,
+                  "m_Loop": false
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRInteractorLineVisual",
+                  "m_LineWidth": 0.02,
+                  "m_OverrideInteractorLineLength": true,
+                  "m_LineLength": 10.0,
+                  "m_AutoAdjustLineLength": false,
+                  "m_MinLineLength": 0.5,
+                  "m_UseDistanceToHitAsMaxLineLength": true,
+                  "m_LineRetractionDelay": 0.5,
+                  "m_LineLengthChangeSpeed": 12.0,
+                  "m_WidthCurve": null,
+                  "m_SetLineColorGradient": true,
+                  "m_ValidColorGradient": null,
+                  "m_InvalidColorGradient": null,
+                  "m_BlockedColorGradient": null,
+                  "m_TreatSelectionAsValidState": false,
+                  "m_SmoothMovement": false,
+                  "m_FollowTightness": 10.0,
+                  "m_SnapThresholdDistance": 10.0,
+                  "m_Reticle": "null",
+                  "m_BlockedReticle": "null",
+                  "m_StopLineAtFirstRaycastHit": true,
+                  "m_StopLineAtSelection": false,
+                  "m_SnapEndpointIfAvailable": true,
+                  "m_LineBendRatio": 0.5,
+                  "m_OverrideInteractorLineOrigin": true,
+                  "m_LineOriginTransform": "null",
+                  "m_LineOriginOffset": 0.0
+                }
+              ],
+              "children": [
+                {
+                  "name": "AttachPoint",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.019,
+                        "y": 0.001,
+                        "z": 0.047
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "AttachPoint",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.019,
+                        "y": 0.001,
+                        "z": 0.047
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "RightUIInteractor",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRController",
+                  "m_UpdateTrackingType": "UpdateAndBeforeRender",
+                  "m_EnableInputTracking": true,
+                  "m_EnableInputActions": true,
+                  "m_ModelPrefab": "null",
+                  "m_ModelParent": "null",
+                  "m_Model": "null",
+                  "m_AnimateModel": false,
+                  "m_ModelSelectTransition": "",
+                  "m_ModelDeSelectTransition": "",
+                  "m_ControllerNode": "RightHand",
+                  "m_SelectUsage": "Grip",
+                  "m_ActivateUsage": "Trigger",
+                  "m_UIPressUsage": "Trigger",
+                  "m_AxisToPressThreshold": 0.1,
+                  "m_RotateAnchorLeft": "PrimaryAxis2DLeft",
+                  "m_RotateAnchorRight": "PrimaryAxis2DRight",
+                  "m_MoveObjectIn": "PrimaryAxis2DUp",
+                  "m_MoveObjectOut": "PrimaryAxis2DDown",
+                  "m_DirectionalAnchorRotation": "PrimaryAxis2D",
+                  "m_PoseProvider": "null"
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRRayInteractor",
+                  "m_InteractionManager": "null",
+                  "m_InteractionLayerMask": null,
+                  "m_InteractionLayers": null,
+                  "m_Bits": -1,
+                  "m_AttachTransform": "AttachPoint",
+                  "m_KeepSelectedTargetValid": true,
+                  "m_DisableVisualsWhenBlockedInGroup": true,
+                  "m_StartingSelectedInteractable": "null",
+                  "m_StartingTargetFilter": "null",
+                  "m_HoverEntered": null,
+                  "m_PersistentCalls": null,
+                  "m_Calls": null,
+                  "size": null,
+                  "m_HoverExited": null,
+                  "m_SelectEntered": null,
+                  "m_SelectExited": null,
+                  "m_StartingHoverFilters": null,
+                  "m_StartingSelectFilters": null,
+                  "m_OnHoverEntered": null,
+                  "m_OnHoverExited": null,
+                  "m_OnSelectEntered": null,
+                  "m_OnSelectExited": null,
+                  "m_SelectActionTrigger": "StateChange",
+                  "m_HideControllerOnSelect": false,
+                  "m_AllowHoveredActivate": false,
+                  "m_TargetPriorityMode": "None",
+                  "m_PlayAudioClipOnSelectEntered": false,
+                  "m_AudioClipForOnSelectEntered": "null",
+                  "m_PlayAudioClipOnSelectExited": false,
+                  "m_AudioClipForOnSelectExited": "null",
+                  "m_PlayAudioClipOnSelectCanceled": false,
+                  "m_AudioClipForOnSelectCanceled": "null",
+                  "m_PlayAudioClipOnHoverEntered": false,
+                  "m_AudioClipForOnHoverEntered": "null",
+                  "m_PlayAudioClipOnHoverExited": false,
+                  "m_AudioClipForOnHoverExited": "null",
+                  "m_PlayAudioClipOnHoverCanceled": false,
+                  "m_AudioClipForOnHoverCanceled": "null",
+                  "m_AllowHoverAudioWhileSelecting": true,
+                  "m_PlayHapticsOnSelectEntered": false,
+                  "m_HapticSelectEnterIntensity": 0.0,
+                  "m_HapticSelectEnterDuration": 0.0,
+                  "m_PlayHapticsOnSelectExited": false,
+                  "m_HapticSelectExitIntensity": 0.0,
+                  "m_HapticSelectExitDuration": 0.0,
+                  "m_PlayHapticsOnSelectCanceled": false,
+                  "m_HapticSelectCancelIntensity": 0.0,
+                  "m_HapticSelectCancelDuration": 0.0,
+                  "m_PlayHapticsOnHoverEntered": false,
+                  "m_HapticHoverEnterIntensity": 0.0,
+                  "m_HapticHoverEnterDuration": 0.0,
+                  "m_PlayHapticsOnHoverExited": false,
+                  "m_HapticHoverExitIntensity": 0.0,
+                  "m_HapticHoverExitDuration": 0.0,
+                  "m_PlayHapticsOnHoverCanceled": false,
+                  "m_HapticHoverCancelIntensity": 0.0,
+                  "m_HapticHoverCancelDuration": 0.0,
+                  "m_AllowHoverHapticsWhileSelecting": true,
+                  "m_LineType": "StraightLine",
+                  "m_BlendVisualLinePoints": true,
+                  "m_MaxRaycastDistance": 0.1,
+                  "m_RayOriginTransform": "null",
+                  "m_ReferenceFrame": "null",
+                  "m_Velocity": 16.0,
+                  "m_Acceleration": 9.8,
+                  "m_AdditionalGroundHeight": 0.1,
+                  "m_AdditionalFlightTime": 0.5,
+                  "m_EndPointDistance": 30.0,
+                  "m_EndPointHeight": -10.0,
+                  "m_ControlPointDistance": 10.0,
+                  "m_ControlPointHeight": 5.0,
+                  "m_SampleFrequency": 20,
+                  "m_HitDetectionType": "Raycast",
+                  "m_SphereCastRadius": 0.02,
+                  "m_ConeCastAngle": 6.0,
+                  "m_RaycastMask": null,
+                  "m_RaycastTriggerInteraction": "Ignore",
+                  "m_RaycastSnapVolumeInteraction": "Collide",
+                  "m_HitClosestOnly": false,
+                  "m_HoverToSelect": false,
+                  "m_HoverTimeToSelect": 0.5,
+                  "m_AutoDeselect": false,
+                  "m_TimeToAutoDeselect": 3.0,
+                  "m_EnableUIInteraction": true,
+                  "m_BlockUIOnInteractableSelection": true,
+                  "m_AllowAnchorControl": true,
+                  "m_UseForceGrab": true,
+                  "m_RotateSpeed": 180.0,
+                  "m_TranslateSpeed": 1.0,
+                  "m_AnchorRotateReferenceFrame": "null",
+                  "m_AnchorRotationMode": "RotateOverTime",
+                  "m_UIHoverEntered": null,
+                  "m_UIHoverExited": null,
+                  "m_EnableARRaycasting": false,
+                  "m_OccludeARHitsWith3DObjects": false,
+                  "m_OccludeARHitsWith2DObjects": false,
+                  "m_ScaleMode": "None"
+                },
+                {
+                  "type": "UnityEngine.LineRenderer",
+                  "m_CastShadows": "On",
+                  "m_ReceiveShadows": true,
+                  "m_DynamicOccludee": true,
+                  "m_StaticShadowCaster": false,
+                  "m_MotionVectors": "Camera Motion Only",
+                  "m_LightProbeUsage": 0,
+                  "m_ReflectionProbeUsage": 0,
+                  "m_RayTracingMode": 0,
+                  "m_RayTraceProcedural": false,
+                  "m_RenderingLayerMask": 1,
+                  "m_RendererPriority": 0,
+                  "m_Materials": null,
+                  "size": null,
+                  "data": "Default-Line",
+                  "m_ProbeAnchor": "null",
+                  "m_LightProbeVolumeOverride": "null",
+                  "m_LightmapParameters": "null",
+                  "m_Positions": null,
+                  "m_Parameters": null,
+                  "widthMultiplier": 0.02,
+                  "widthCurve": null,
+                  "colorGradient": null,
+                  "numCornerVertices": 0,
+                  "numCapVertices": 0,
+                  "alignment": "View",
+                  "textureMode": "Stretch",
+                  "shadowBias": 0.5,
+                  "generateLightingData": false,
+                  "m_UseWorldSpace": true,
+                  "m_Loop": false
+                },
+                {
+                  "type": "UnityEngine.XR.Interaction.Toolkit.XRInteractorLineVisual",
+                  "m_LineWidth": 0.02,
+                  "m_OverrideInteractorLineLength": true,
+                  "m_LineLength": 10.0,
+                  "m_AutoAdjustLineLength": false,
+                  "m_MinLineLength": 0.5,
+                  "m_UseDistanceToHitAsMaxLineLength": true,
+                  "m_LineRetractionDelay": 0.5,
+                  "m_LineLengthChangeSpeed": 12.0,
+                  "m_WidthCurve": null,
+                  "m_SetLineColorGradient": true,
+                  "m_ValidColorGradient": null,
+                  "m_InvalidColorGradient": null,
+                  "m_BlockedColorGradient": null,
+                  "m_TreatSelectionAsValidState": false,
+                  "m_SmoothMovement": false,
+                  "m_FollowTightness": 10.0,
+                  "m_SnapThresholdDistance": 10.0,
+                  "m_Reticle": "null",
+                  "m_BlockedReticle": "null",
+                  "m_StopLineAtFirstRaycastHit": true,
+                  "m_StopLineAtSelection": false,
+                  "m_SnapEndpointIfAvailable": true,
+                  "m_LineBendRatio": 0.5,
+                  "m_OverrideInteractorLineOrigin": true,
+                  "m_LineOriginTransform": "null",
+                  "m_LineOriginOffset": 0.0
+                }
+              ],
+              "children": [
+                {
+                  "name": "AttachPoint",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.019,
+                        "y": 0.001,
+                        "z": 0.047
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "AttachPoint",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.019,
+                        "y": 0.001,
+                        "z": 0.047
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Plant",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.2337,
+            "y": 0.6679,
+            "z": 2.0308
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        {
+          "type": "UnityEngine.MeshFilter",
+          "m_Mesh": "PlantUmbrella"
+        },
+        {
+          "type": "UnityEngine.MeshRenderer",
+          "m_CastShadows": "On",
+          "m_ReceiveShadows": true,
+          "m_DynamicOccludee": true,
+          "m_StaticShadowCaster": false,
+          "m_MotionVectors": "Per Object Motion",
+          "m_LightProbeUsage": 1,
+          "m_ReflectionProbeUsage": 1,
+          "m_RayTracingMode": 2,
+          "m_RayTraceProcedural": false,
+          "m_RenderingLayerMask": 1,
+          "m_RendererPriority": 0,
+          "m_Materials": null,
+          "size": null,
+          "data": "PlantSetMat",
+          "m_ProbeAnchor": "null",
+          "m_LightProbeVolumeOverride": "null",
+          "m_LightmapParameters": "null"
+        }
+      ]
+    },
+    {
+      "name": "Plant",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.229,
+            "y": 0.598,
+            "z": 2.016
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        {
+          "type": "UnityEngine.MeshFilter",
+          "m_Mesh": "PlantPot"
+        },
+        {
+          "type": "UnityEngine.MeshRenderer",
+          "m_CastShadows": "On",
+          "m_ReceiveShadows": true,
+          "m_DynamicOccludee": true,
+          "m_StaticShadowCaster": false,
+          "m_MotionVectors": "Per Object Motion",
+          "m_LightProbeUsage": 1,
+          "m_ReflectionProbeUsage": 1,
+          "m_RayTracingMode": 2,
+          "m_RayTraceProcedural": false,
+          "m_RenderingLayerMask": 1,
+          "m_RendererPriority": 0,
+          "m_Materials": null,
+          "size": null,
+          "data": "PlantSetMat",
+          "m_ProbeAnchor": "null",
+          "m_LightProbeVolumeOverride": "null",
+          "m_LightmapParameters": "null"
+        }
+      ]
+    },
+    {
+      "name": "Mug",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.227441981,
+            "y": 0.514,
+            "z": 1.327
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rigidbody",
+          "m_Mass": 1.0,
+          "m_Drag": 0.0,
+          "m_AngularDrag": 0.05,
+          "m_UseGravity": false,
+          "m_IsKinematic": true,
+          "m_Interpolate": "None",
+          "m_CollisionDetection": "Discrete"
+        }
+      ],
+      "children": [
+        {
+          "name": "HandGrabInteractable",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.296863854,
+                "y": 0.5308911,
+                "z": 1.217662
+              },
+              "rotation": {
+                "x": 69.17645,
+                "y": 52.2019463,
+                "z": 323.689728
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.296863854,
+                    "y": 0.5308911,
+                    "z": 1.217662
+                  },
+                  "rotation": {
+                    "x": 69.17645,
+                    "y": 52.2019463,
+                    "z": 323.689728
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.294481456,
+                    "y": 0.533116,
+                    "z": 1.23904347
+                  },
+                  "rotation": {
+                    "x": 69.17645,
+                    "y": 52.2019463,
+                    "z": 323.689728
+                  },
+                  "scale": {
+                    "x": 0.8,
+                    "y": 0.8000001,
+                    "z": 0.8
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.3047009,
+                    "y": 0.5286862,
+                    "z": 1.19809878
+                  },
+                  "rotation": {
+                    "x": 69.17645,
+                    "y": 52.2019463,
+                    "z": 323.689728
+                  },
+                  "scale": {
+                    "x": 1.20000029,
+                    "y": 1.2,
+                    "z": 1.20000017
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HandGrabInteractable",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.255363315,
+                "y": 0.6591183,
+                "z": 1.24345
+              },
+              "rotation": {
+                "x": 9.870719,
+                "y": 79.13283,
+                "z": 19.1397381
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.255363315,
+                    "y": 0.6591183,
+                    "z": 1.24345
+                  },
+                  "rotation": {
+                    "x": 9.870719,
+                    "y": 79.13283,
+                    "z": 19.1397381
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.250061274,
+                    "y": 0.6406284,
+                    "z": 1.25931132
+                  },
+                  "rotation": {
+                    "x": 9.87072,
+                    "y": 79.13283,
+                    "z": 19.1397381
+                  },
+                  "scale": {
+                    "x": 0.799999952,
+                    "y": 0.800000131,
+                    "z": 0.800000131
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.26071012,
+                    "y": 0.6720938,
+                    "z": 1.227574
+                  },
+                  "rotation": {
+                    "x": 9.87072,
+                    "y": 79.13283,
+                    "z": 19.1397381
+                  },
+                  "scale": {
+                    "x": 1.2,
+                    "y": 1.20000017,
+                    "z": 1.20000017
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HandGrabInteractable",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.07895486,
+                "y": 0.5113016,
+                "z": 1.37482953
+              },
+              "rotation": {
+                "x": 77.32913,
+                "y": 173.636932,
+                "z": 303.266876
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.07895486,
+                    "y": 0.5113016,
+                    "z": 1.37482953
+                  },
+                  "rotation": {
+                    "x": 77.32913,
+                    "y": 173.636932,
+                    "z": 303.266876
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0970751047,
+                    "y": 0.517133653,
+                    "z": 1.36425185
+                  },
+                  "rotation": {
+                    "x": 77.32913,
+                    "y": 173.636932,
+                    "z": 303.266876
+                  },
+                  "scale": {
+                    "x": 0.799999952,
+                    "y": 0.799999952,
+                    "z": 0.7999999
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.05781874,
+                    "y": 0.5011039,
+                    "z": 1.38553166
+                  },
+                  "rotation": {
+                    "x": 77.32913,
+                    "y": 173.636932,
+                    "z": 303.266876
+                  },
+                  "scale": {
+                    "x": 1.20000017,
+                    "y": 1.2,
+                    "z": 1.2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HandGrabInteractable_mirror",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.296863854,
+                "y": 0.5308911,
+                "z": 1.217662
+              },
+              "rotation": {
+                "x": 290.823547,
+                "y": 62.9727669,
+                "z": 143.689728
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.296863854,
+                    "y": 0.5308911,
+                    "z": 1.217662
+                  },
+                  "rotation": {
+                    "x": 290.823547,
+                    "y": 62.9727669,
+                    "z": 143.689728
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.294481456,
+                    "y": 0.533116,
+                    "z": 1.23904347
+                  },
+                  "rotation": {
+                    "x": 290.823547,
+                    "y": 53.16958,
+                    "z": 143.689743
+                  },
+                  "scale": {
+                    "x": 0.800000131,
+                    "y": 0.800000131,
+                    "z": 0.800000131
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.3047009,
+                    "y": 0.5286862,
+                    "z": 1.19809878
+                  },
+                  "rotation": {
+                    "x": 290.823547,
+                    "y": 65.9240341,
+                    "z": 143.689728
+                  },
+                  "scale": {
+                    "x": 1.20000052,
+                    "y": 1.20000052,
+                    "z": 1.20000052
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HandGrabInteractable_mirror",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.255363345,
+                "y": 0.659118235,
+                "z": 1.24345
+              },
+              "rotation": {
+                "x": 350.1293,
+                "y": 63.90918,
+                "z": 199.13974
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.255363345,
+                    "y": 0.659118235,
+                    "z": 1.24345
+                  },
+                  "rotation": {
+                    "x": 350.1293,
+                    "y": 63.90918,
+                    "z": 199.13974
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.250061274,
+                    "y": 0.6406284,
+                    "z": 1.25931132
+                  },
+                  "rotation": {
+                    "x": 350.129272,
+                    "y": 63.9113579,
+                    "z": 199.13974
+                  },
+                  "scale": {
+                    "x": 0.800000131,
+                    "y": 0.800000131,
+                    "z": 0.800000131
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.26071012,
+                    "y": 0.6720938,
+                    "z": 1.22757411
+                  },
+                  "rotation": {
+                    "x": 350.129272,
+                    "y": 63.866436,
+                    "z": 199.13974
+                  },
+                  "scale": {
+                    "x": 1.20000017,
+                    "y": 1.20000017,
+                    "z": 1.20000017
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HandGrabInteractable_mirror",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.0789549351,
+                "y": 0.5113016,
+                "z": 1.27917039
+              },
+              "rotation": {
+                "x": 282.670868,
+                "y": 186.363373,
+                "z": 123.266533
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0789549351,
+                    "y": 0.5113016,
+                    "z": 1.27917039
+                  },
+                  "rotation": {
+                    "x": 282.670868,
+                    "y": 186.363373,
+                    "z": 123.266533
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.09707515,
+                    "y": 0.517133653,
+                    "z": 1.28974807
+                  },
+                  "rotation": {
+                    "x": 282.670868,
+                    "y": 186.363373,
+                    "z": 123.266533
+                  },
+                  "scale": {
+                    "x": 0.8,
+                    "y": 0.8,
+                    "z": 0.8
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HandGrab Point",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0578187853,
+                    "y": 0.5011039,
+                    "z": 1.26846826
+                  },
+                  "rotation": {
+                    "x": 282.670868,
+                    "y": 186.363373,
+                    "z": 123.266533
+                  },
+                  "scale": {
+                    "x": 1.20000029,
+                    "y": 1.20000029,
+                    "z": 1.20000029
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Visuals",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.227441981,
+                "y": 0.514,
+                "z": 1.327
+              },
+              "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "Root",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.227441981,
+                    "y": 0.514,
+                    "z": 1.327
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "name": "simpleGrabCupMesh",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.227441981,
+                        "y": 0.514,
+                        "z": 1.327
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "mugMaterial",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "cup"
+                    },
+                    {
+                      "type": "UnityEngine.BoxCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Size": null,
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "m_Center": null
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": true,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "cup"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Audio",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.227441981,
+                "y": 0.514,
+                "z": 1.327
+              },
+              "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "BasicGrabPickupAudio",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.227441981,
+                    "y": 0.514,
+                    "z": 1.327
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.AudioSource",
+                  "OutputAudioMixerGroup": "null",
+                  "m_audioClip": "GrabObject01",
+                  "m_PlayOnAwake": false,
+                  "m_Volume": 1.0,
+                  "m_Pitch": 1.0,
+                  "Loop": false,
+                  "Mute": false,
+                  "Spatialize": false,
+                  "SpatializePostEffects": false,
+                  "Priority": 128,
+                  "DopplerLevel": 1.0,
+                  "MinDistance": 1.0,
+                  "MaxDistance": 500.0,
+                  "Pan2D": 0.0,
+                  "rolloffMode": "Logarithmic Rolloff",
+                  "BypassEffects": false,
+                  "BypassListenerEffects": false,
+                  "BypassReverbZones": false,
+                  "rolloffCustomCurve": null,
+                  "panLevelCustomCurve": null,
+                  "spreadCustomCurve": null,
+                  "reverbZoneMixCustomCurve": null
+                }
+              ]
+            },
+            {
+              "name": "BasicGrabReleaseAudio",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.227441981,
+                    "y": 0.514,
+                    "z": 1.327
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.AudioSource",
+                  "OutputAudioMixerGroup": "null",
+                  "m_audioClip": "DropObject01",
+                  "m_PlayOnAwake": false,
+                  "m_Volume": 1.0,
+                  "m_Pitch": 1.0,
+                  "Loop": false,
+                  "Mute": false,
+                  "Spatialize": false,
+                  "SpatializePostEffects": false,
+                  "Priority": 128,
+                  "DopplerLevel": 1.0,
+                  "MinDistance": 1.0,
+                  "MaxDistance": 500.0,
+                  "Pan2D": 0.0,
+                  "rolloffMode": "Logarithmic Rolloff",
+                  "BypassEffects": false,
+                  "BypassListenerEffects": false,
+                  "BypassReverbZones": false,
+                  "rolloffCustomCurve": null,
+                  "panLevelCustomCurve": null,
+                  "spreadCustomCurve": null,
+                  "reverbZoneMixCustomCurve": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Box",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.109,
+            "y": 0.567,
+            "z": 1.749
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 30.0000076,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        }
+      ],
+      "children": [
+        {
+          "name": "BoxBase",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.109,
+                "y": 0.567,
+                "z": 1.749
+              },
+              "rotation": {
+                "x": 0.0,
+                "y": 30.0000076,
+                "z": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            },
+            {
+              "type": "UnityEngine.MeshFilter",
+              "m_Mesh": "BoxBase"
+            },
+            {
+              "type": "UnityEngine.MeshRenderer",
+              "m_CastShadows": "On",
+              "m_ReceiveShadows": true,
+              "m_DynamicOccludee": true,
+              "m_StaticShadowCaster": false,
+              "m_MotionVectors": "Per Object Motion",
+              "m_LightProbeUsage": 1,
+              "m_ReflectionProbeUsage": 1,
+              "m_RayTracingMode": 2,
+              "m_RayTraceProcedural": false,
+              "m_RenderingLayerMask": 1,
+              "m_RendererPriority": 0,
+              "m_Materials": null,
+              "size": null,
+              "data": "BoxMat",
+              "m_ProbeAnchor": "null",
+              "m_LightProbeVolumeOverride": "null",
+              "m_LightmapParameters": "null"
+            },
+            {
+              "type": "UnityEngine.MeshCollider",
+              "m_Material": "null",
+              "m_IsTrigger": false,
+              "m_Convex": false,
+              "m_CookingOptions": 30,
+              "m_Mesh": "BoxBase_collider"
+            }
+          ]
+        },
+        {
+          "name": "Hinge",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.173306853,
+                "y": 0.6063,
+                "z": 1.80898273
+              },
+              "rotation": {
+                "x": 0.0,
+                "y": 30.0000076,
+                "z": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            },
+            {
+              "type": "UnityEngine.Rigidbody",
+              "m_Mass": 1.0,
+              "m_Drag": 0.0,
+              "m_AngularDrag": 0.05,
+              "m_UseGravity": true,
+              "m_IsKinematic": true,
+              "m_Interpolate": "None",
+              "m_CollisionDetection": "Discrete"
+            }
+          ],
+          "children": [
+            {
+              "name": "BoxLid",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.173306853,
+                    "y": 0.6063,
+                    "z": 1.80898273
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 30.0000076,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.Rigidbody",
+                  "m_Mass": 1.0,
+                  "m_Drag": 0.0,
+                  "m_AngularDrag": 0.05,
+                  "m_UseGravity": true,
+                  "m_IsKinematic": true,
+                  "m_Interpolate": "None",
+                  "m_CollisionDetection": "Discrete"
+                },
+                {
+                  "type": "UnityEngine.MeshFilter",
+                  "m_Mesh": "BoxLid"
+                },
+                {
+                  "type": "UnityEngine.MeshRenderer",
+                  "m_CastShadows": "On",
+                  "m_ReceiveShadows": true,
+                  "m_DynamicOccludee": true,
+                  "m_StaticShadowCaster": false,
+                  "m_MotionVectors": "Per Object Motion",
+                  "m_LightProbeUsage": 1,
+                  "m_ReflectionProbeUsage": 1,
+                  "m_RayTracingMode": 2,
+                  "m_RayTraceProcedural": false,
+                  "m_RenderingLayerMask": 1,
+                  "m_RendererPriority": 0,
+                  "m_Materials": null,
+                  "size": null,
+                  "data": "BoxMat",
+                  "m_ProbeAnchor": "null",
+                  "m_LightProbeVolumeOverride": "null",
+                  "m_LightmapParameters": "null"
+                },
+                {
+                  "type": "UnityEngine.MeshCollider",
+                  "m_Material": "null",
+                  "m_IsTrigger": false,
+                  "m_Convex": true,
+                  "m_CookingOptions": 30,
+                  "m_Mesh": "BoxLid_Collider"
+                }
+              ],
+              "children": [
+                {
+                  "name": "GrabInteractable",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.173306853,
+                        "y": 0.6063,
+                        "z": 1.80898273
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 30.0000076,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "HandGrabInteractable",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.173306853,
+                        "y": 0.6063,
+                        "z": 1.80898273
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 30.0000076,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Audio",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.109,
+                "y": 0.567,
+                "z": 1.749
+              },
+              "rotation": {
+                "x": 0.0,
+                "y": 30.0000076,
+                "z": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "ComplexGrabBoxGrabAudio",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.109,
+                    "y": 0.567,
+                    "z": 1.749
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 30.0000076,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.AudioSource",
+                  "OutputAudioMixerGroup": "null",
+                  "m_audioClip": "null",
+                  "m_PlayOnAwake": false,
+                  "m_Volume": 1.0,
+                  "m_Pitch": 1.0,
+                  "Loop": false,
+                  "Mute": false,
+                  "Spatialize": false,
+                  "SpatializePostEffects": false,
+                  "Priority": 128,
+                  "DopplerLevel": 1.0,
+                  "MinDistance": 1.0,
+                  "MaxDistance": 500.0,
+                  "Pan2D": 0.0,
+                  "rolloffMode": "Logarithmic Rolloff",
+                  "BypassEffects": false,
+                  "BypassListenerEffects": false,
+                  "BypassReverbZones": false,
+                  "rolloffCustomCurve": null,
+                  "panLevelCustomCurve": null,
+                  "spreadCustomCurve": null,
+                  "reverbZoneMixCustomCurve": null
+                }
+              ]
+            },
+            {
+              "name": "ComplexGrabBoxReleaseAudio",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.109,
+                    "y": 0.567,
+                    "z": 1.749
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 30.0000076,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.AudioSource",
+                  "OutputAudioMixerGroup": "null",
+                  "m_audioClip": "null",
+                  "m_PlayOnAwake": false,
+                  "m_Volume": 1.0,
+                  "m_Pitch": 1.0,
+                  "Loop": false,
+                  "Mute": false,
+                  "Spatialize": false,
+                  "SpatializePostEffects": false,
+                  "Priority": 128,
+                  "DopplerLevel": 1.0,
+                  "MinDistance": 1.0,
+                  "MaxDistance": 500.0,
+                  "Pan2D": 0.0,
+                  "rolloffMode": "Logarithmic Rolloff",
+                  "BypassEffects": false,
+                  "BypassListenerEffects": false,
+                  "BypassReverbZones": false,
+                  "rolloffCustomCurve": null,
+                  "panLevelCustomCurve": null,
+                  "spreadCustomCurve": null,
+                  "reverbZoneMixCustomCurve": null
+                }
+              ]
+            },
+            {
+              "name": "ComplexGrabBoxOpenClose",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.109,
+                    "y": 0.567,
+                    "z": 1.749
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 30.0000076,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "name": "ComplexGrabBoxOpenAudio",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.109,
+                        "y": 0.567,
+                        "z": 1.749
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 30.0000076,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.AudioSource",
+                      "OutputAudioMixerGroup": "null",
+                      "m_audioClip": "null",
+                      "m_PlayOnAwake": false,
+                      "m_Volume": 1.0,
+                      "m_Pitch": 1.0,
+                      "Loop": false,
+                      "Mute": false,
+                      "Spatialize": false,
+                      "SpatializePostEffects": false,
+                      "Priority": 128,
+                      "DopplerLevel": 1.0,
+                      "MinDistance": 1.0,
+                      "MaxDistance": 500.0,
+                      "Pan2D": 0.0,
+                      "rolloffMode": "Logarithmic Rolloff",
+                      "BypassEffects": false,
+                      "BypassListenerEffects": false,
+                      "BypassReverbZones": false,
+                      "rolloffCustomCurve": null,
+                      "panLevelCustomCurve": null,
+                      "spreadCustomCurve": null,
+                      "reverbZoneMixCustomCurve": null
+                    }
+                  ]
+                },
+                {
+                  "name": "ComplexGrabBoxCloseAudio",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.109,
+                        "y": 0.567,
+                        "z": 1.749
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 30.0000076,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.AudioSource",
+                      "OutputAudioMixerGroup": "null",
+                      "m_audioClip": "null",
+                      "m_PlayOnAwake": false,
+                      "m_Volume": 1.0,
+                      "m_Pitch": 1.0,
+                      "Loop": false,
+                      "Mute": false,
+                      "Spatialize": false,
+                      "SpatializePostEffects": false,
+                      "Priority": 128,
+                      "DopplerLevel": 1.0,
+                      "MinDistance": 1.0,
+                      "MaxDistance": 500.0,
+                      "Pan2D": 0.0,
+                      "rolloffMode": "Logarithmic Rolloff",
+                      "BypassEffects": false,
+                      "BypassListenerEffects": false,
+                      "BypassReverbZones": false,
+                      "rolloffCustomCurve": null,
+                      "panLevelCustomCurve": null,
+                      "spreadCustomCurve": null,
+                      "reverbZoneMixCustomCurve": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SmallRoom",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        }
+      ],
+      "children": [
+        {
+          "name": "SmallRoomEnvironment",
+          "type": "GameObject",
+          "components": [
+            {
+              "type": "UnityEngine.Transform",
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "Reflection Probe",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.054,
+                    "y": 0.807846665,
+                    "z": 0.605
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.ReflectionProbe",
+                  "m_Type": 0,
+                  "m_Mode": 2,
+                  "m_RefreshMode": "On Awake",
+                  "m_TimeSlicingMode": "All faces at once",
+                  "m_Resolution": 128,
+                  "m_UpdateFrequency": 0,
+                  "m_BoxSize": null,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "m_BoxOffset": null,
+                  "m_NearClip": 0.3,
+                  "m_FarClip": 1000.0,
+                  "m_ShadowDistance": 100.0,
+                  "m_ClearFlags": "Skybox",
+                  "m_BackGroundColor": null,
+                  "m_CullingMask": null,
+                  "m_IntensityMultiplier": 0.62,
+                  "m_BlendDistance": 1.0,
+                  "m_HDR": true,
+                  "m_BoxProjection": false,
+                  "m_RenderDynamicObjects": false,
+                  "m_UseOcclusionCulling": true,
+                  "m_Importance": 1,
+                  "m_CustomBakedTexture": "photo_studio_broadway_hall_1k"
+                }
+              ]
+            },
+            {
+              "name": "Desk",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.75,
+                    "z": 0.5
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "name": "DeskSurface",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.75,
+                        "z": 0.5
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "MRDesk"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "MRDeskMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.BoxCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Size": null,
+                      "x": 0.0,
+                      "y": 0.005689655,
+                      "z": 0.0,
+                      "m_Center": null
+                    }
+                  ]
+                },
+                {
+                  "name": "DeskShadow",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": -0.0299999714,
+                        "z": 0.779000044
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.14,
+                        "y": 1.14,
+                        "z": 1.14
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "MRDeskShadow"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "MRDeskShadow",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "MRDeskShadow"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "BackgroundSkydome",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": -0.14,
+                    "y": 1.41326857,
+                    "z": 2.87
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.MeshFilter",
+                  "m_Mesh": "backgroundSkydome"
+                },
+                {
+                  "type": "UnityEngine.MeshRenderer",
+                  "m_CastShadows": "On",
+                  "m_ReceiveShadows": true,
+                  "m_DynamicOccludee": true,
+                  "m_StaticShadowCaster": false,
+                  "m_MotionVectors": "Per Object Motion",
+                  "m_LightProbeUsage": 1,
+                  "m_ReflectionProbeUsage": 1,
+                  "m_RayTracingMode": 2,
+                  "m_RayTraceProcedural": false,
+                  "m_RenderingLayerMask": 1,
+                  "m_RendererPriority": 0,
+                  "m_Materials": null,
+                  "size": null,
+                  "data": "StencilSkydome",
+                  "m_ProbeAnchor": "null",
+                  "m_LightProbeVolumeOverride": "null",
+                  "m_LightmapParameters": "null"
+                },
+                {
+                  "type": "UnityEngine.MeshCollider",
+                  "m_Material": "null",
+                  "m_IsTrigger": false,
+                  "m_Convex": false,
+                  "m_CookingOptions": 30,
+                  "m_Mesh": "backgroundSkydome"
+                }
+              ]
+            },
+            {
+              "name": "Directional Light",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 3.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 50.0,
+                    "y": 330.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                },
+                {
+                  "type": "UnityEngine.Light",
+                  "m_Type": "No Shadows",
+                  "m_Shape": "Cone",
+                  "m_Color": null,
+                  "m_Intensity": 1.0,
+                  "m_Range": 10.0,
+                  "m_SpotAngle": 30.0,
+                  "m_InnerSpotAngle": 21.80208,
+                  "m_CookieSize": 10.0,
+                  "m_Shadows": null,
+                  "m_Resolution": "Use Quality Settings",
+                  "m_CustomResolution": -1,
+                  "m_Strength": 1.0,
+                  "m_Bias": 0.05,
+                  "m_NormalBias": 0.4,
+                  "m_NearPlane": 0.2,
+                  "m_CullingMatrixOverride": null,
+                  "e00": 1.0,
+                  "e01": 0.0,
+                  "e02": 0.0,
+                  "e03": 0.0,
+                  "e10": 0.0,
+                  "e11": 1.0,
+                  "e12": 0.0,
+                  "e13": 0.0,
+                  "e20": 0.0,
+                  "e21": 0.0,
+                  "e22": 1.0,
+                  "e23": 0.0,
+                  "e30": 0.0,
+                  "e31": 0.0,
+                  "e32": 0.0,
+                  "e33": 1.0,
+                  "m_UseCullingMatrixOverride": false,
+                  "m_Cookie": "null",
+                  "m_DrawHalo": false,
+                  "m_BakingOutput": null,
+                  "probeOcclusionLightIndex": -1,
+                  "occlusionMaskChannel": -1,
+                  "lightmapBakeMode": null,
+                  "lightmapBakeType": "Realtime",
+                  "mixedLightingMode": "Shadowmask",
+                  "isBaked": false,
+                  "m_Flare": "null",
+                  "m_RenderMode": "Auto",
+                  "m_CullingMask": null,
+                  "m_RenderingLayerMask": 1,
+                  "m_Lightmapping": "Mixed",
+                  "m_LightShadowCasterMode": 0,
+                  "m_AreaSize": null,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "m_BounceIntensity": 1.0,
+                  "m_ColorTemperature": 6570.0,
+                  "m_UseColorTemperature": false,
+                  "m_BoundingSphereOverride": null,
+                  "z": 0.0,
+                  "w": 0.0,
+                  "m_UseBoundingSphereOverride": false,
+                  "m_UseViewFrustumForShadowCasterCull": true,
+                  "m_ShadowRadius": 0.0,
+                  "m_ShadowAngle": 0.0
+                },
+                {
+                  "type": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
+                  "m_Version": 1,
+                  "m_UsePipelineSettings": true,
+                  "m_AdditionalLightsShadowResolutionTier": 2,
+                  "m_LightLayerMask": "LightLayerDefault",
+                  "m_CustomShadowLayers": false,
+                  "m_ShadowLayerMask": "LightLayerDefault",
+                  "m_LightCookieSize": null,
+                  "x": 0.0,
+                  "y": 0.0,
+                  "m_LightCookieOffset": null
+                }
+              ]
+            },
+            {
+              "name": "SmallRoom",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "name": "Armchair",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": -1.38633835,
+                        "y": 0.0,
+                        "z": 2.46505547
+                      },
+                      "rotation": {
+                        "x": -1.32443986E-14,
+                        "y": 117.432861,
+                        "z": -3.23266037E-15
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "armchair_studio"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "SmallRoomFabricMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "Armchair",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": -1.58365691,
+                        "y": 5.61121851E-08,
+                        "z": 1.15433156
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 71.39692,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "armchair_studio.001"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "SmallRoomFabricMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "Couch",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 1.53923011,
+                        "y": 1.86264515E-09,
+                        "z": 1.609652
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 270.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "couch_studio"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "SmallRoomFurnitureMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "Ground",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 0.774932563,
+                        "y": 0.774932563,
+                        "z": 0.774932563
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "ground"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "SmallRoomFloorMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "Carpet",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 0.774932563,
+                        "y": 0.774932563,
+                        "z": 0.774932563
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "grounRug"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "SmallRoomRugMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "Plant",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 1.06191969,
+                        "y": 0.0,
+                        "z": 2.75516939
+                      },
+                      "rotation": {
+                        "x": 89.98022,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "Planter"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "PlantMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "Standing Lamp",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": -1.79257011,
+                        "y": 2.98023224E-08,
+                        "z": 1.86560535
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "tripod lamp"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "SmallRoomWoodMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "Coffee Table",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.131,
+                        "y": 0.0,
+                        "z": 1.78
+                      },
+                      "rotation": {
+                        "x": 270.0,
+                        "y": 90.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "traditional_coffee_table"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "FurnitureAO",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "PlantPot",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 1.033,
+                        "y": 0.18,
+                        "z": 2.694
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.6,
+                        "y": 1.5,
+                        "z": 1.6
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "PlantPot"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "PlantSetMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    }
+                  ]
+                },
+                {
+                  "name": "Door",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.497792631,
+                        "y": 0.0,
+                        "z": 3.96
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 100.0,
+                        "y": 100.0,
+                        "z": 100.0
+                      }
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "InteriorDoorDynamic",
+                      "type": "GameObject",
+                      "components": [
+                        {
+                          "type": "UnityEngine.Transform",
+                          "position": {
+                            "x": 0.4933555,
+                            "y": 0.8653252,
+                            "z": 3.958752
+                          },
+                          "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                          }
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "InteriorDoorHandle",
+                          "type": "GameObject",
+                          "components": [
+                            {
+                              "type": "UnityEngine.Transform",
+                              "position": {
+                                "x": 1.3854326,
+                                "y": 0.9060861,
+                                "z": 3.98552918
+                              },
+                              "rotation": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                              },
+                              "scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                              }
+                            },
+                            {
+                              "type": "UnityEngine.MeshFilter",
+                              "m_Mesh": "InteriorDoorHandle"
+                            },
+                            {
+                              "type": "UnityEngine.MeshRenderer",
+                              "m_CastShadows": "On",
+                              "m_ReceiveShadows": true,
+                              "m_DynamicOccludee": true,
+                              "m_StaticShadowCaster": false,
+                              "m_MotionVectors": "Per Object Motion",
+                              "m_LightProbeUsage": 1,
+                              "m_ReflectionProbeUsage": 1,
+                              "m_RayTracingMode": 2,
+                              "m_RayTraceProcedural": false,
+                              "m_RenderingLayerMask": 1,
+                              "m_RendererPriority": 0,
+                              "m_Materials": null,
+                              "size": null,
+                              "data": "InteriorDoorMat",
+                              "m_ProbeAnchor": "null",
+                              "m_LightProbeVolumeOverride": "null",
+                              "m_LightmapParameters": "null"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "InteriorDoorHinge",
+                          "type": "GameObject",
+                          "components": [
+                            {
+                              "type": "UnityEngine.Transform",
+                              "position": {
+                                "x": 0.9615612,
+                                "y": 0.995393634,
+                                "z": 3.985854
+                              },
+                              "rotation": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                              },
+                              "scale": {
+                                "x": 0.01,
+                                "y": 0.01,
+                                "z": 0.01
+                              }
+                            },
+                            {
+                              "type": "UnityEngine.MeshFilter",
+                              "m_Mesh": "InteriorDoorHinge"
+                            },
+                            {
+                              "type": "UnityEngine.MeshRenderer",
+                              "m_CastShadows": "On",
+                              "m_ReceiveShadows": true,
+                              "m_DynamicOccludee": true,
+                              "m_StaticShadowCaster": false,
+                              "m_MotionVectors": "Per Object Motion",
+                              "m_LightProbeUsage": 1,
+                              "m_ReflectionProbeUsage": 1,
+                              "m_RayTracingMode": 2,
+                              "m_RayTraceProcedural": false,
+                              "m_RenderingLayerMask": 1,
+                              "m_RendererPriority": 0,
+                              "m_Materials": null,
+                              "size": null,
+                              "data": "DoorMat",
+                              "m_ProbeAnchor": "null",
+                              "m_LightProbeVolumeOverride": "null",
+                              "m_LightmapParameters": "null"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "InteriorDoorStatic",
+                      "type": "GameObject",
+                      "components": [
+                        {
+                          "type": "UnityEngine.Transform",
+                          "position": {
+                            "x": 0.497792631,
+                            "y": 0.0,
+                            "z": 3.96
+                          },
+                          "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                          },
+                          "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                          }
+                        },
+                        {
+                          "type": "UnityEngine.MeshFilter",
+                          "m_Mesh": "InteriorDoorStatic"
+                        },
+                        {
+                          "type": "UnityEngine.MeshRenderer",
+                          "m_CastShadows": "On",
+                          "m_ReceiveShadows": true,
+                          "m_DynamicOccludee": true,
+                          "m_StaticShadowCaster": false,
+                          "m_MotionVectors": "Per Object Motion",
+                          "m_LightProbeUsage": 1,
+                          "m_ReflectionProbeUsage": 1,
+                          "m_RayTracingMode": 2,
+                          "m_RayTraceProcedural": false,
+                          "m_RenderingLayerMask": 1,
+                          "m_RendererPriority": 0,
+                          "m_Materials": null,
+                          "size": null,
+                          "data": "InteriorDoorMat",
+                          "m_ProbeAnchor": "null",
+                          "m_LightProbeVolumeOverride": "null",
+                          "m_LightmapParameters": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walls",
+              "type": "GameObject",
+              "components": [
+                {
+                  "type": "UnityEngine.Transform",
+                  "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "name": "Wall",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -1.5
+                      },
+                      "rotation": {
+                        "x": 90.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "Plane"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "WallMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "Plane"
+                    }
+                  ]
+                },
+                {
+                  "name": "Wall",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": -3.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 90.0,
+                        "y": 90.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "Plane"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "WallMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "Plane"
+                    }
+                  ]
+                },
+                {
+                  "name": "Wall",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 4.0
+                      },
+                      "rotation": {
+                        "x": 270.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "Plane"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "WallMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "Plane"
+                    }
+                  ]
+                },
+                {
+                  "name": "Wall",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 3.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 90.0,
+                        "y": 270.0,
+                        "z": 0.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "Plane"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "WallMat",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "Plane"
+                    }
+                  ]
+                },
+                {
+                  "name": "Wall",
+                  "type": "GameObject",
+                  "components": [
+                    {
+                      "type": "UnityEngine.Transform",
+                      "position": {
+                        "x": 0.0,
+                        "y": 3.0,
+                        "z": 0.0
+                      },
+                      "rotation": {
+                        "x": 0.0,
+                        "y": 180.0,
+                        "z": 180.0
+                      },
+                      "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                      }
+                    },
+                    {
+                      "type": "UnityEngine.MeshFilter",
+                      "m_Mesh": "Plane"
+                    },
+                    {
+                      "type": "UnityEngine.MeshRenderer",
+                      "m_CastShadows": "On",
+                      "m_ReceiveShadows": true,
+                      "m_DynamicOccludee": true,
+                      "m_StaticShadowCaster": false,
+                      "m_MotionVectors": "Per Object Motion",
+                      "m_LightProbeUsage": 1,
+                      "m_ReflectionProbeUsage": 1,
+                      "m_RayTracingMode": 2,
+                      "m_RayTraceProcedural": false,
+                      "m_RenderingLayerMask": 1,
+                      "m_RendererPriority": 0,
+                      "m_Materials": null,
+                      "size": null,
+                      "data": "Lit",
+                      "m_ProbeAnchor": "null",
+                      "m_LightProbeVolumeOverride": "null",
+                      "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "Plane"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Origin",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "EnVisionVR",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        {
+          "type": "CameraFieldOfView",
+          "sceneGraphFileName": "scene_graph_importance_practice.json",
+          "mainCamera": "Main Camera",
+          "readObjects": null,
+          "size": null,
+          "localizationMode": false,
+          "volume": 1.0,
+          "spatialBlend": 1.0,
+          "soundController": "null",
+          "recentlySpokenObject": "null",
+          "rightHand": "RightHand Controller",
+          "leftHand": "LeftHand Controller",
+          "primaryButton": "PrimaryButton",
+          "secondaryButton": "SecondaryButton",
+          "triggerButton": "TriggerButton",
+          "leftprimaryButtonDown": false,
+          "leftsecondaryButtonDown": false,
+          "lefttriggerButtonDown": false,
+          "primaryButtonDown": false,
+          "secondaryButtonDown": false,
+          "triggerButtonDown": false
+        },
+        {
+          "type": "LeftHandFunctions",
+          "controller": "null",
+          "maxDistance": 10.0,
+          "maxInterval": 3.0,
+          "readObjects": null,
+          "size": null,
+          "newImportance": 0.0,
+          "originalImportance": 0.0
+        },
+        {
+          "type": "ObjectLocalization",
+          "leftcontroller": "null",
+          "rightcontroller": "RightHand Controller",
+          "hand": "right",
+          "maxDistance": 10.0,
+          "maxInterval": 3.0,
+          "secondaryButton": "SecondaryButton",
+          "secondaryButtonDown": false,
+          "rightHand": "RightHand Controller",
+          "foundObject": "null"
+        },
+        {
+          "type": "RightHandFunctions",
+          "controller": "RightHand Controller",
+          "beginnerMode": false
+        },
+        {
+          "type": "SceneIntroduction",
+          "csvFilePath": "Assets/descriptions.csv",
+          "isSpeaking_": false
+        },
+        {
+          "type": "SpatialSoundController",
+          "volume": 1.0,
+          "spatialBlend": 1.0
+        },
+        {
+          "type": "SpeechRecognition",
+          "rightHand": "RightHand Controller",
+          "primaryButton": "PrimaryButton"
+        },
+        {
+          "type": "SpeechSynthesis",
+          "audioSourceNeedStop": false
+        },
+        {
+          "type": "UnityEngine.AudioSource",
+          "OutputAudioMixerGroup": "null",
+          "m_audioClip": "beep",
+          "m_PlayOnAwake": false,
+          "m_Volume": 0.596,
+          "m_Pitch": 1.0,
+          "Loop": false,
+          "Mute": false,
+          "Spatialize": false,
+          "SpatializePostEffects": false,
+          "Priority": 128,
+          "DopplerLevel": 1.0,
+          "MinDistance": 1.0,
+          "MaxDistance": 500.0,
+          "Pan2D": 0.0,
+          "rolloffMode": "Logarithmic Rolloff",
+          "BypassEffects": false,
+          "BypassListenerEffects": false,
+          "BypassReverbZones": false,
+          "rolloffCustomCurve": null,
+          "panLevelCustomCurve": null,
+          "spreadCustomCurve": null,
+          "reverbZoneMixCustomCurve": null
+        }
+      ]
+    }
+  ]
+}

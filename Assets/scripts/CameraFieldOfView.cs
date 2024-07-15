@@ -18,6 +18,7 @@ public class CameraFieldOfView : MonoBehaviour
 {
     SpeechSynthesis SpeechSynthesis;
     SceneIntroduction SceneIntroduction;
+    public string sceneGraphFileName;  // Name of the JSON file, e.g., scene_graph_practice.json
     public Camera mainCamera;
     RightHandFunctions buttonCheckFieldOfView;
     public Dictionary<string, float> importanceValues;
@@ -27,6 +28,8 @@ public class CameraFieldOfView : MonoBehaviour
     SpeechSynthesizer synthesizer;
     private AudioSource audioSource;
     public bool localizationMode = false;
+    public float readobjectdecay = 0.5f;
+    public float dist_threshold = 2.5f;
     public float volume = 1f;
     public float spatialBlend = 1f;
     private GameObject hitobj1;
@@ -146,7 +149,7 @@ public class CameraFieldOfView : MonoBehaviour
         // Calculate the new importance values for each object based on the distance from the camera
         foreach (GameObject obj in objectsInFieldOfView)
         {
-            float dist_threshold = 2.5f;
+            
             //if (objectsInFieldOfView.Count < 10)
             //{
             //    dist_threshold = 20f;
@@ -156,7 +159,7 @@ public class CameraFieldOfView : MonoBehaviour
             float distance = Vector3.Distance(obj.transform.position, mainCamera.transform.position);
             newImportance = originalImportance * (Mathf.Exp(-distance) - Mathf.Exp(-dist_threshold));
             int objectDecay = readObjects.Where(x => x.Equals(obj)).Count();
-            newImportance = (float)(newImportance * Math.Pow(0.5, objectDecay));
+            newImportance = (float)(newImportance * Math.Pow(readobjectdecay, objectDecay));
             if (distance > dist_threshold)
                 newImportance = 0;
             //importanceValues[obj.name] = newImportance; // Update the importance value in the dictionary
@@ -413,7 +416,9 @@ public class CameraFieldOfView : MonoBehaviour
 
     void LoadImportanceValues()
     {
-        string jsonFilePath = Path.Combine(Application.dataPath, "scene_graph_importance.json");
+        //string jsonFilePath = Path.Combine(Application.dataPath, "scene_graph_importance.json");
+        string jsonFilePath = Path.Combine(Application.dataPath, sceneGraphFileName);
+        
         //Debug.LogError("Importance Values Loaded from:" + jsonFilePath);
 
         if (File.Exists(jsonFilePath))

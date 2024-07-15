@@ -48,6 +48,8 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_330D2BF9: 9
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_82444B89: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 0}
     - Vector2_FF926C6D: {r: 30, g: 30, b: 0, a: 0}

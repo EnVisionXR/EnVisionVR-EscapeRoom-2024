@@ -50,6 +50,9 @@ public class CameraFieldOfView : MonoBehaviour
     private float timer = 0f; // Timer to track the elapsed time
     public Thread synthesisThread;
 
+    // Action handled by EnVisionManager
+    public Action<string> OnLogEventAction;
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -205,7 +208,8 @@ public class CameraFieldOfView : MonoBehaviour
             {
                 string message = obj.name;
                 string messageFull = obj.name + " is within the field of view. Position: " + obj.transform.position + " Importance: " + GetImportanceValue(obj.name);
-                Debug.LogError(messageFull);
+                Debug.Log(messageFull);
+                OnLogEventAction?.Invoke(string.Format("main_object,{0},\"{1}\"", i, messageFull));
                 SpeechSynthesis.SpeakText(message.Replace("_", " "));
                 if (SpeechRecognition.cancelActivate)
                 {
@@ -263,7 +267,8 @@ public class CameraFieldOfView : MonoBehaviour
                 }
 
                 string objname = objectsInFieldOfView[i].name;
-                Debug.LogError("Sound of " + objname);
+                Debug.Log("Sound of " + objname);
+                OnLogEventAction?.Invoke(string.Format("object_sound,{0}", objname));
 
                 await Task.Delay((int)(800f));
 
@@ -413,6 +418,7 @@ public class CameraFieldOfView : MonoBehaviour
 
         if (File.Exists(jsonFilePath))
         {
+            
             string jsonContent = File.ReadAllText(jsonFilePath);
             SceneGraph sceneGraphContent = JsonConvert.DeserializeObject<SceneGraph>(jsonContent);
 
@@ -423,7 +429,7 @@ public class CameraFieldOfView : MonoBehaviour
                 //descriptions = new Dictionary<string, string>(); // New dictionary for descriptions
                 TraverseSceneGraph(sceneGraphContent.children);
 
-                Debug.LogError("Importance values and descriptions loaded successfully.");
+                Debug.Log("Importance values and descriptions loaded successfully.");
             }
             else
             {
@@ -435,6 +441,11 @@ public class CameraFieldOfView : MonoBehaviour
             Debug.LogError("JSON file not found at path: " + jsonFilePath);
         }
     }
+
+    //private IEnumerator LoadImportanceValuesAsync()
+    //{
+
+    //}
 
     void TraverseSceneGraph(List<SceneGraph> children)
     {

@@ -40,6 +40,9 @@ public class SpeechRecognition : MonoBehaviour
     //private bool SingleClick = false, DoubleClick = false;
     private bool previouslyPressed = false;
 
+    // Action handled by EnVisionManager
+    public Action<string> OnLogEventAction;
+
     public void Start()
     {
         sceneDescript = false;
@@ -202,10 +205,11 @@ public class SpeechRecognition : MonoBehaviour
 
     public void SingleClick()
     {
-        UnityEngine.Debug.LogError("Single click detected, starting voice recognition...");
+        OnLogEventAction?.Invoke("single_click");
+        //UnityEngine.Debug.LogError("Single click detected, starting voice recognition...");
         cancelActivate = false;
         //UnityEngine.Debug.Log("Space key was pressed.");
-        UnityEngine.Debug.Log("Speak into your microphone.");
+        //UnityEngine.Debug.Log("Speak into your microphone.");
 
         // Attach the audio source to the new game object
         AudioClip clip = Resources.Load<AudioClip>("VA_activate");
@@ -226,10 +230,11 @@ public class SpeechRecognition : MonoBehaviour
 
     public void DoubleClick()
     {
-        UnityEngine.Debug.LogError("Double click detected, cancelling audio...");
-        UnityEngine.Debug.Log("Double click detected");
-        UnityEngine.Debug.Log("Cancel");
-        UnityEngine.Debug.Log("Stopped all audio sources in the scene.");
+        OnLogEventAction?.Invoke("double_click");
+        //UnityEngine.Debug.LogError("Double click detected, cancelling audio...");
+        //UnityEngine.Debug.Log("Double click detected");
+        //UnityEngine.Debug.Log("Cancel");
+        //UnityEngine.Debug.Log("Stopped all audio sources in the scene.");
         cancelActivate = true;
         AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
         foreach (AudioSource audioSource in allAudioSources)
@@ -266,9 +271,10 @@ public class SpeechRecognition : MonoBehaviour
         switch (speechRecognitionResult.Reason)
         {
             case ResultReason.RecognizedSpeech:
-                UnityEngine.Debug.LogError($"RECOGNIZED: Text={speechRecognitionResult.Text}");
+                UnityEngine.Debug.Log($"RECOGNIZED: Text={speechRecognitionResult.Text}");
+                OnLogEventAction?.Invoke(string.Format("speech_rec,\"{0}\"", speechRecognitionResult.Text));
                 // Attach the audio source to the new game object
-                
+
                 //string pattern = @"Where is the (\w+)\s+(\w+)\s+(\w+)";
                 string pattern = @"Where is the (.+)$";
                 //string obj_pattern = @"(\w+) object"
@@ -299,7 +305,8 @@ public class SpeechRecognition : MonoBehaviour
                     audioSource.Play();
                     match_obj_string = match_obj.Groups[1].Value;
                     match_obj_string = match_obj_string.Replace("?", string.Empty);
-                    UnityEngine.Debug.LogError("Searching for: " + match_obj_string); 
+                    UnityEngine.Debug.Log("Searching for: " + match_obj_string);
+                    OnLogEventAction?.Invoke(string.Format("interaction_triggered,\"{0}\"", match_obj_string));
                     //UnityEngine.Debug.Log("match_obj: " + match_obj);
                     //UnityEngine.Debug.Log(match_obj_string + "match_obj.Groups[1].Value");
                     //UnityEngine.Debug.Log("match_obj.Groups[2].Value:" + match_obj.Groups[2].Value);
@@ -325,7 +332,8 @@ public class SpeechRecognition : MonoBehaviour
                     audioSource.clip = clip_stop;
                     // Play the audio clip
                     audioSource.Play();
-                    UnityEngine.Debug.LogError("Activate Scene Description");
+                    UnityEngine.Debug.Log("Activate Scene Description");
+                    OnLogEventAction?.Invoke("scene_description_triggered");
                     sceneDescript = true;
                     break;
                 }
@@ -349,7 +357,8 @@ public class SpeechRecognition : MonoBehaviour
                     audioSource.clip = clip_stop;
                     // Play the audio clip
                     audioSource.Play();
-                    UnityEngine.Debug.LogError("Activate FoV Main Object");
+                    UnityEngine.Debug.Log("Activate FoV Main Object");
+                    OnLogEventAction?.Invoke("object_localization_triggered");
                     mainObjectActivate = true;
                     break;
                 }
@@ -376,7 +385,8 @@ public class SpeechRecognition : MonoBehaviour
                             audioSource.Stop();
                         }
                     }
-                    UnityEngine.Debug.LogError("Stopped all audio sources in the scene.");
+                    UnityEngine.Debug.Log("Stopped all audio sources in the scene.");
+                    OnLogEventAction?.Invoke("cancel_triggered");
                     AudioClip clip_cancel = Resources.Load<AudioClip>("Cancel_success");
                     audioSource.spatialBlend = 0.0f;
                     audioSource.clip = clip_cancel;
@@ -397,7 +407,8 @@ public class SpeechRecognition : MonoBehaviour
                 if (unrecognizeCount > 2)
                 {
                     speechSynthesis.SpeakText("Sorry, I didn't get that. Please try saying 'Where am I', 'What is near me', or 'Where is the <objectname>'.");
-                    UnityEngine.Debug.LogError("Sorry, I didn't get that. Please try saying 'Where am I', 'What is near me', or 'Where is the <objectname>'.");
+                    UnityEngine.Debug.Log("Sorry, I didn't get that. Please try saying 'Where am I', 'What is near me', or 'Where is the <objectname>'.");
+                    OnLogEventAction?.Invoke("unrecognized");
                 }
                 break;
             case ResultReason.NoMatch:
@@ -408,13 +419,15 @@ public class SpeechRecognition : MonoBehaviour
                 // Play the audio clip
                 audioSource.Play();
 
-                UnityEngine.Debug.LogError($"NOMATCH: Speech could not be recognized.");
+                UnityEngine.Debug.Log($"NOMATCH: Speech could not be recognized.");
+                OnLogEventAction?.Invoke("no_match");
                 speechSynthesis.SpeakText("Sorry, I didn't recognize your voice. Please try again.");
                 cancelActivate = false;
                 break;
             case ResultReason.Canceled:
                 var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
                 UnityEngine.Debug.LogError($"CANCELED: Reason={cancellation.Reason}");
+                OnLogEventAction?.Invoke(string.Format("interaction_triggered,\"{0}\"", cancellation.Reason));
                 speechSynthesis.SpeakText("Sorry, speech recognition was cancelled. Please try again.");
                 if (cancellation.Reason == CancellationReason.Error)
                 {

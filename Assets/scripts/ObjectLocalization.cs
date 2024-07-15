@@ -37,6 +37,9 @@ public class ObjectLocalization : MonoBehaviour
     public GameObject foundObject = null;
     //public GameObject queryObject = null;
 
+    // Action handled by EnVisionManager
+    public Action<string> OnLogEventAction;
+
     private void Start()
     {
         EnVisionVR = GameObject.Find("EnVisionVR");
@@ -108,7 +111,8 @@ public class ObjectLocalization : MonoBehaviour
                 foundObjectName = foundObjectName.Replace(" tag", "");
                 Debug.Log("Found " + foundObjectName);
                 SpeechSynthesis.SpeakText("Found " + foundObjects[0].name.Replace("_", " "));
-                Debug.LogError("Found " + foundObjects[0].name.Replace("_", " "));
+                //Debug.LogError("Found " + foundObjects[0].name.Replace("_", " "));
+                OnLogEventAction?.Invoke(string.Format("object_found,{0}", foundObjects[0].name));
                 Transform foundObjectTransform = foundObjects[0].transform;
                 TriggerBeep(foundObjectTransform, "right");
             }
@@ -179,17 +183,20 @@ public class ObjectLocalization : MonoBehaviour
                         Debug.Log("Abs Dot Forward" + Mathf.Abs(dotForward).ToString());
                         if (Mathf.Abs(dotForward)>2)
                         {
-                            Debug.LogError(dotForward.ToString("0") + " meters ahead");
+                            //Debug.LogError(dotForward.ToString("0") + " meters ahead");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", (dotForward.ToString("0") + " meters ahead")));
                             SpeechSynthesis.SpeakText(dotForward.ToString("0") + " meters ahead");
                         }
                         else if (Mathf.Abs(dotForward)>0.5 && Mathf.Abs(dotForward)<2)
                         {
-                            Debug.LogError("one meter ahead");
+                            //Debug.LogError("one meter ahead");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "one meter ahead"));
                             SpeechSynthesis.SpeakText("one meter ahead");
                         }
                         else
                         {
-                            Debug.LogError("forward");
+                            //Debug.LogError("forward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "forward"));
                             SpeechSynthesis.SpeakText("forward");
                         }
                     }
@@ -198,17 +205,20 @@ public class ObjectLocalization : MonoBehaviour
                         Debug.Log("Abs Dot Backward" + Mathf.Abs(dotForward).ToString());
                         if (Mathf.Abs(dotForward) > 2)
                         {
-                            Debug.LogError(Mathf.Abs(dotForward).ToString("0") + " meters backward");
+                            //Debug.LogError(Mathf.Abs(dotForward).ToString("0") + " meters backward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", (dotForward.ToString("0") + " meters backward")));
                             SpeechSynthesis.SpeakText(Mathf.Abs(dotForward).ToString("0") + " meters backward");
                         }
                         else if (Mathf.Abs(dotForward) > 0.5 && Mathf.Abs(dotForward) < 2)
                         {
-                            Debug.LogError("one meter backward");
+                            //Debug.LogError("one meter backward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "one meter backward"));
                             SpeechSynthesis.SpeakText("one meter backward");
                         }
                         else
                         {
-                            Debug.LogError("backward");
+                            //Debug.LogError("backward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "backward"));
                             SpeechSynthesis.SpeakText("backward");
                         }
                             
@@ -222,17 +232,20 @@ public class ObjectLocalization : MonoBehaviour
                         Debug.Log("Abs Dot Right" + Mathf.Abs(dotRight).ToString());
                         if (Mathf.Abs(dotRight) > 2)
                         {
-                            Debug.LogError(Mathf.Abs(dotRight).ToString("0") + " meters right");
+                            //Debug.LogError(Mathf.Abs(dotRight).ToString("0") + " meters right");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", (dotForward.ToString("0") + " meters right")));
                             SpeechSynthesis.SpeakText(Mathf.Abs(dotRight).ToString("0") + " meters right");
                         }
                         else if (Mathf.Abs(dotRight) > 0.5 && Mathf.Abs(dotRight) < 2)
                         {
-                            Debug.LogError("one meter right");
+                            //Debug.LogError("one meter right");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "one meter right"));
                             SpeechSynthesis.SpeakText("one meter right");
                         }
                         else
                         {
-                            Debug.LogError("right");
+                            //Debug.LogError("right");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "right"));
                             SpeechSynthesis.SpeakText("right");
                         }
                             
@@ -243,17 +256,20 @@ public class ObjectLocalization : MonoBehaviour
                         SpeechSynthesis.SpeakText(Mathf.Abs(dotRight).ToString("0") + " meters left");
                         if (Mathf.Abs(dotRight) > 2)
                         {
-                            Debug.LogError(Mathf.Abs(dotRight).ToString("0") + " meters left");
+                            //Debug.LogError(Mathf.Abs(dotRight).ToString("0") + " meters left");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", (dotForward.ToString("0") + " meters left")));
                             SpeechSynthesis.SpeakText(Mathf.Abs(dotRight).ToString("0") + " meters left");
                         }
                         else if (Mathf.Abs(dotRight) > 0.5 && Mathf.Abs(dotRight) < 2)
                         {
-                            Debug.LogError("one meter left");
+                            //Debug.LogError("one meter left");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "one meter left"));
                             SpeechSynthesis.SpeakText("one meter left");
                         }
                         else
                         {
-                            Debug.LogError("left");
+                            //Debug.LogError("left");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "left"));
                             SpeechSynthesis.SpeakText("left");
                         }
                             
@@ -270,17 +286,20 @@ public class ObjectLocalization : MonoBehaviour
                         Debug.Log("Abs Dot Up" + Mathf.Abs(dotUp).ToString());
                         if (Mathf.Abs(dotUp) > 2)
                         {
-                            Debug.LogError(Mathf.Abs(dotUp).ToString("0") + " meters upward");
+                            //Debug.LogError(Mathf.Abs(dotUp).ToString("0") + " meters upward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", (dotForward.ToString("0") + " meters upward")));
                             SpeechSynthesis.SpeakText(Mathf.Abs(dotUp).ToString("0") + " meters upward");
                         }
                         else if (Mathf.Abs(dotUp) > 0.5 && Mathf.Abs(dotUp) < 2)
                         {
-                            Debug.LogError("one meter upward");
+                            //Debug.LogError("one meter upward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "one meter upward"));
                             SpeechSynthesis.SpeakText("one meter upward");
                         }
                         else
                         {
-                            Debug.LogError("upward");
+                            //Debug.LogError("upward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "upward"));
                             SpeechSynthesis.SpeakText("upward");
                         }
                             
@@ -290,17 +309,20 @@ public class ObjectLocalization : MonoBehaviour
                         Debug.Log("Abs Dot Down" + Mathf.Abs(dotUp).ToString());
                         if (Mathf.Abs(dotUp) > 2)
                         {
-                            Debug.LogError(Mathf.Abs(dotUp).ToString("0") + " meters downward");
+                            //Debug.LogError(Mathf.Abs(dotUp).ToString("0") + " meters downward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", (dotForward.ToString("0") + " meters downward")));
                             SpeechSynthesis.SpeakText(Mathf.Abs(dotUp).ToString("0") + " meters downward");
                         }
                         else if (Mathf.Abs(dotUp) > 0.5 && Mathf.Abs(dotUp) < 2)
                         {
-                            Debug.LogError("one meter downward");
+                            //Debug.LogError("one meter downward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "one meter downward"));
                             SpeechSynthesis.SpeakText("one meter downward");
                         }
                         else
                         {
-                            Debug.LogError("downward");
+                            //Debug.LogError("downward");
+                            OnLogEventAction?.Invoke(string.Format("object_localization,{0}", "downward"));
                             SpeechSynthesis.SpeakText("downward");
                         }
                             

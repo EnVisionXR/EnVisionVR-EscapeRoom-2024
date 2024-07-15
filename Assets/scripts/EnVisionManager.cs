@@ -8,13 +8,19 @@ public class EnVisionManager : MonoBehaviour
 {
     public GameObject dialogPrefab;
 
+    public bool logTrackingData = false;
+    public float tdLogInterval = 0.1f; //s
+
     private StudyUIManager studyUI_;
-    private Logger logger_;    
+    private Logger logger_, tdLogger_;    
     private int participantId_ = -1;
     private int anchorId_ = -1;
     private string condition_ = "UNSET";
     private StudyTaskState taskState_ = StudyTaskState.Condition_Start;
     private bool taskStateUpdated_ = false;
+    private float tdLastLogTime_ = 0;
+    private Transform rhController_ = null;
+    private Transform lhController_ = null;
 
     enum StudyTaskState
     {
@@ -41,6 +47,10 @@ public class EnVisionManager : MonoBehaviour
 
         string logFilename = "envision_" + System.DateTime.Now.ToString("yyyy_MMM_dd__hh_mm_ss") + ".log";
         logger_ = new Logger(logFilename);
+
+        // Log of tracking data
+        string tdLogFilename = "tracking_data_" + System.DateTime.Now.ToString("yyyy_MMM_dd__hh_mm_ss") + ".log";
+        tdLogger_ = new Logger(tdLogFilename);
     }
 
     // Start is called before the first frame update
@@ -62,6 +72,13 @@ public class EnVisionManager : MonoBehaviour
             taskStateUpdated_ = false;
 
             AdvanceTaskState();
+        }
+
+        if (logTrackingData && (Time.time > tdLastLogTime_ + tdLogInterval))
+        {
+            tdLastLogTime_ = Time.time;
+
+            LogTrackingData();
         }
     }
 
@@ -159,7 +176,9 @@ public class EnVisionManager : MonoBehaviour
     private void ConfigurePracticeScene()
     {
         taskState_ = StudyTaskState.Practice;
-        //SetAnchorPosition(anchorId_);
+
+        lhController_ = null;
+        rhController_ = null;
 
         // If no-assistance condition, deactivate EnVisionVR
         if (condition_ == "NVR")
@@ -180,6 +199,9 @@ public class EnVisionManager : MonoBehaviour
     private void ConfigureScene()
     {
         SetAnchorPosition(anchorId_);
+
+        lhController_ = null;
+        rhController_ = null;
 
         // If no-assistance condition, deactivate EnVisionVR
         if (condition_ == "NVR")
@@ -297,5 +319,40 @@ public class EnVisionManager : MonoBehaviour
 
         studyUI_.SetDisplayText(displayText);
         LogEvent("task_state_change," + displayText, true);
+    }
+
+    private void LogTrackingData()
+    {
+        // cam_pos_x, cam_pos_y, cam_pos_z, cam_rot_w, cam_rot_x, cam_rot_y, cam_rot_z,  
+        Vector3 camPos = Camera.main.transform.position;
+        Quaternion camRot = Camera.main.transform.rotation;
+
+        if (lhController_ == null)
+        {
+            lhController_ = GameObject.Find("XR Rig/Camera Offset/LeftHand Controller").transform;
+        }
+
+        if (rhController_ == null)
+        {
+            rhController_ = GameObject.Find("XR Rig/Camera Offset/RightHand Controller").transform;
+        }
+
+        if (lhController_ == null || rhController_ == null)
+        {
+            return;
+        }
+
+        Vector3 lhPos = lhController_.position;
+        Quaternion lhRot = lhController_.rotation;
+        Vector3 rhPos = rhController_.position;
+        Quaternion rhRot = rhController_.rotation;
+
+        string camPoseLog = string.Format("{0:F6},{1:F6},{2:F6},{3:F9},{4:F9},{5:F9},{6:F9}", camPos.x, camPos.y, camPos.z, camRot.w, camRot.x, camRot.y, camRot.z);
+        string lhPoseLog = string.Format("{0:F6},{1:F6},{2:F6},{3:F9},{4:F9},{5:F9},{6:F9}", lhPos.x, lhPos.y, lhPos.z, lhRot.w, lhRot.x, lhRot.y, lhRot.z);
+        string rhPoseLog = string.Format("{0:F6},{1:F6},{2:F6},{3:F9},{4:F9},{5:F9},{6:F9}", rhPos.x, rhPos.y, rhPos.z, rhRot.w, rhRot.x, rhRot.y, rhRot.z);
+
+        string logLine = string.Format("{0},{1},{2},{3}", camPoseLog, lhPoseLog, rhPoseLog, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
+
+        tdLogger_.WriteLine(logLine);
     }
 }

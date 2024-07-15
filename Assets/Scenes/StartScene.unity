@@ -132,7 +132,6 @@ GameObject:
   m_Component:
   - component: {fileID: 44396686}
   - component: {fileID: 44396687}
-  - component: {fileID: 44396688}
   m_Layer: 0
   m_Name: EnVision
   m_TagString: Untagged
@@ -170,18 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPrefab: {fileID: 8827472104952735025, guid: 1d3aad42bd9b4de46954a65ac0c74d65,
     type: 3}
---- !u!114 &44396688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44396685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c19acd3b380f30b4c9fd8048af8f2e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  logTrackingData: 0
+  tdLogInterval: 100
 --- !u!1001 &307666239
 PrefabInstance:
   m_ObjectHideFlags: 0

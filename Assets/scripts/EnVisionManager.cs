@@ -19,6 +19,8 @@ public class EnVisionManager : MonoBehaviour
     enum StudyTaskState
     {
         Condition_Start,
+        Practice,
+        Practice_Done,
         Task1_Pre,
         Task1_InProgress,
         Task1_Done,
@@ -118,7 +120,7 @@ public class EnVisionManager : MonoBehaviour
 
         LogEvent("condition," + condition_, true);
 
-        StartCoroutine(LoadEscapeRoomSceneAsync());
+        StartCoroutine(LoadPracticeSceneAsync());
     }
 
     private IEnumerator ShowOnStartDialog()
@@ -154,6 +156,27 @@ public class EnVisionManager : MonoBehaviour
         }
     }
 
+    private void ConfigurePracticeScene()
+    {
+        taskState_ = StudyTaskState.Practice;
+        //SetAnchorPosition(anchorId_);
+
+        // If no-assistance condition, deactivate EnVisionVR
+        if (condition_ == "NVR")
+        {
+            GameObject.Find("EnVisionVR").SetActive(false);
+        }
+        else
+        {
+            GameObject.Find("EnVisionVR").GetComponent<SpeechRecognition>().OnLogEventAction = LogEvent;
+            GameObject.Find("EnVisionVR").GetComponent<SceneIntroduction>().OnLogEventAction = LogEvent;
+            GameObject.Find("EnVisionVR").GetComponent<CameraFieldOfView>().OnLogEventAction = LogEvent;
+            GameObject.Find("EnVisionVR").GetComponent<ObjectLocalization>().OnLogEventAction = LogEvent;
+        }
+
+        studyUI_.SetDisplayText(string.Format("Practice Scene Loaded - Condition: {0} (Press <space> to move to test scene)", condition_));
+    }
+
     private void ConfigureScene()
     {
         SetAnchorPosition(anchorId_);
@@ -171,7 +194,23 @@ public class EnVisionManager : MonoBehaviour
             GameObject.Find("EnVisionVR").GetComponent<ObjectLocalization>().OnLogEventAction = LogEvent;
         }
 
-        studyUI_.SetDisplayText(string.Format("Escape Room Loaded - Condition: {0} (Press <space> to move to Task 1)", condition_));
+        //studyUI_.SetDisplayText(string.Format("Escape Room Loaded - Condition: {0} (Press <space> to move to Task 1)", condition_));
+    }
+
+    private IEnumerator LoadPracticeSceneAsync()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("PracticeScene");
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        LogEvent("scene_loaded", true);
+        ConfigurePracticeScene();
+
+        yield return null;
     }
 
     private IEnumerator LoadEscapeRoomSceneAsync()
@@ -214,6 +253,11 @@ public class EnVisionManager : MonoBehaviour
 
         switch (taskState_)
         {
+            case StudyTaskState.Practice_Done:
+                displayText = string.Format("Escape Room Loaded - Condition: {0} (Press <space> to move to Task 1)", condition_);
+                StartCoroutine(LoadEscapeRoomSceneAsync());
+                break;
+
             case StudyTaskState.Task1_Pre:
                 displayText = "Task 1 (Press <space> to indicate Task 1 has started)";
                 break;

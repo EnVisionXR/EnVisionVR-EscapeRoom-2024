@@ -1,49 +1,56 @@
-Camera Anchor,PositionX,PositionY,PositionZ,RotationY,KeyObject1,KeyObject2,KeyObject3,Description
-Key-1,-4.86,1.18,0.63,0,WindowFrame,,,A WindowFrame is set against a backdrop of a building. A small light source can be seen through the window; illuminating the space and creating a sense of adventure and curiosity.
-Key-2,-4.86,1.18,0.63,45,PotionBottle,GhostToy,FirePlace,A PotionBottle sits on a shelf next to a FirePlace; creating a cozy atmosphere. A floating GhostToy can also be seen; adding a mysterious touch to the setting.
-Key-3,-4.86,1.18,0.63,90,PotionBottle,GhostToy,HouseInterior,A creepy-looking room with a checkered floor and a low ceiling is filled with various objects. A PotionBottle can be seen on a shelf; while a GhostToy is floating nearby.
-Key-4,-4.86,1.18,0.63,135,instructionsPaper,Painting1,HouseInterior,You are inside a room with a wooden floor and a wall adorned with a Painting. There is an InstructionsPaper on display; and the HouseInterior can be seen in the background. The room is illuminated by a glowing green light; creating a mysterious atmosphere.
-Key-5,-4.86,1.18,0.63,180,instructionsPaper,Painting2,Stove,There is a kitchen counter with a Pumpkin sitting on it. An InstructionsPaper is also present; likely providing guidance for a recipe or cooking instructions. Above the counter; a Painting hangs on the wall; adding a touch of artistic flair to the space. A stove can be seen in the background; indicating that this is indeed a kitchen setup. This scene could be part of an adventure game
-Key-6,-4.86,1.18,0.63,225,Stove,Bookshelf,WindowFrame,A kitchen features a large stove; with a bookshelf nearby. The space also includes several windows that provide ample light. A variety of fruits; such as bananas; apples; and oranges; are scattered throughout the room; adding a touch of color and vibrancy to the environment.
-Key-7,-4.86,1.18,0.63,270,Cauldron,Bookshelf,InstructionsPaper,A cauldron with a brewing button is placed beside a bookshelf filled with various books. An instructionsPaper is also visible; likely providing guidance for using the cauldron. The setting appears to be in a room; possibly a workshop or a wizard's lair; where potions and spells are concocted and studied.
-Key-8,-4.86,1.18,0.63,315,Cauldron,Window,InstructionsPaper,A large pot is sitting on a stove; with a brewing button in front of it. A window is present in the background; allowing natural light to illuminate the space.
-4-0,-5.6,1.3,-0.5,0,Cauldron,Window,BrewingButton,A large metal cauldron sits on a stove; with a window nearby. A brewing button is in front of the cauldron; suggesting that the area might be related to alchemy or potion-making.
-01月04日,-5.6,1.3,-0.5,45,HouseInterior,Window,Shelf,You are inside a room with a house interior; a window; and a shelf. To your left is a large cauldron with a brewing button in front of it. The room is illuminated by a glowing aura; creating a mysterious atmosphere.
-02月04日,-5.6,1.3,-0.5,90,HouseInterior,GhostToy,Shelf,A creepy-looking house interior is depicted with a glowing ghost toy floating beside a shelf. The room is dimly lit; adding to the eerie atmosphere.
-03月04日,-5.6,1.3,-0.5,135,Walls,Pumpkin,PotionBottle,In the right of your view is a kitchen counter. On the counter; there are several pumpkins and potion bottles; creating a spooky atmosphere.
-04月04日,-5.6,1.3,-0.5,180,Window,Pumpkin,PotionBottle,A table is set with various food items; including eggs; meat; oranges; and cheese. The table appears to be a kitchen counter; and the food items are displayed as if prepared for a Halloween feast.
-05月04日,-5.6,1.3,-0.5,225,Window,Meat,Cheese,In the left of your view is a kitchen counter with a window above it. On the counter; there are eggs; meat; pumpkin toys; oranges; and slices of cheese; creating a unique and festive atmosphere.
-06月04日,-5.6,1.3,-0.5,270,Bookshelf,Window,InstructionsPaper,A bookshelf filled with books; pumpkins; and potion bottles is next to a window. On the shelf; there is a piece of instructions paper. In front of the instructions paper is a green potion bottle.
-07月04日,-5.6,1.3,-0.5,315,Bookshelf,Cauldron,InstructionsPaper,A bookshelf rests to the left of a large cauldron. On the bookshelf is a green potion bottle. Behind the potion bottle is an instructions paper.
-5-0,-0.55,1,-0.19,0,Windows,Wall,HouseInterior,There are two windows in the room; one on the left side and another on the right side. The room appears to be part of a larger house interior.
-01月05日,-0.55,1,-0.19,45,Windows,Treasure Chest,FirePlace,A treasure chest sits next to a window; while a fireplace burns nearby. The room is filled with various objects.
-02月05日,-0.55,1,-0.19,90,Door,Treasure Chest,FirePlace,There is a fireplace in the scene; with a treasure chest to its left. Inside the chest lies an instructions paper and several wood logs. On top of the fireplace is a shelf with a few books and potion bottles of different colors.
-03月05日,-0.55,1,-0.19,135,Door,Shelf,Window,You are inside a room with a shelf against the wall. A door with a window is also present in the room. The room has various objects scattered around; such as bottles and books on the shelf.
-04月05日,-0.55,1,-0.19,180,Desk,Bookholder,Window,Shelves with various books can be seen in the view. To its right is a desk with a bookholder in front of a window. 
-05月05日,-0.55,1,-0.19,225,Desk,Bookholder,Radio,A room features a desk with a bookholder and a radio. The space also has a bookshelf filled with various books; creating a cozy atmosphere.
-06月05日,-0.55,1,-0.19,270,Shelf,GhostToy,Radio,A GhostToy is floating beside a shelf in an escape room. The room is filled with various items; including a radio on a shelf. The ghostToy appears to be watching over the room; creating a mysterious atmosphere.
-07月05日,-0.55,1,-0.19,315,Shelf,GhostToy,Window,A GhostToy is floating in a room with a shelf and a window. The ghostToy appears to be looking out the window; observing the world outside. The room is filled with various items; including several bottles scattered around; some of which are on the shelf.
-6-0,-1.9,1.4,-1.3,0,Shelf,GhostToy,Window,A GhostToy appears to be haunting a kitchen. The kitchen appears to be in a cartoon-like style; and the ghostToy seems to be lurking behind the shelf; possibly waiting to scare someone.
-01月06日,-1.9,1.4,-1.3,45,Window,Desk,BookHolder,You are inside a room with a desk. There is a window nearby; and a bookholder is on the desk. The room has a wooden floor; and the overall atmosphere is warm and inviting.
-02月06日,-1.9,1.4,-1.3,90,InstructionsPaper,Desk,BookHolder,A piece of instructions paper; a bookholder; and a golden key are present on the desk. The first drawer of the desk has a keyhole on it; which could probably be unlocked by the golden key.
-03月06日,-1.9,1.4,-1.3,135,InstructionsPaper,Desk,Window,A wooden desk is seen with a piece of paper featuring instructions. A window is also present in the scene.
-04月06日,-1.9,1.4,-1.3,180,Walls,Window,,A window provides a view of the outdoors; with a desk situated next to it.
-05月06日,-1.9,1.4,-1.3,225,Shelf,Radio,,There is a shelf with a small radio on it; emitting a broadcast. There are two knobs on the radio; which can be turned to switch the radio on and adjust the volume.
-06月06日,-1.9,1.4,-1.3,270,Shelf,Radio,HouseInterior,A radio is placed on a shelf in the interior of a house. The room is filled with various items; creating a cozy atmosphere.
-07月06日,-1.9,1.4,-1.3,315,Shelf,GhostToy,Cauldron,A ghost toy is floating next to a shelf in a room. Further to the left is a cauldron which adds to the eerie atmosphere. The room is also filled with various books and potion bottles.
-7-0,-3.41,1.44,0.78,0,Wand,InstructionsPaper,,A wand; an instructions paper; and several books are in your view. The wand is floating in a horizontal position; and all objects are placed on the shelf right in front of you.
-01月07日,-3.41,1.44,0.78,45,GhostToy,Wand,InstructionsPaper,A wand and instructions paper are on the shelf in the left of your view. A ghost toy is floating in mid-air in the center of your view.
-02月07日,-3.41,1.44,0.78,90,GhostToy,Book,HouseInterior,A ghost toy is floating in mid air in the center of your view. Further beyond is the interior of a wooden house.
-03月07日,-3.41,1.44,0.78,135,HouseInterior,Painting,GhostToy,From left to right you can see a ghost toy near you; and further away a fireplace; a desk; and several paintings on the wall.
-04月07日,-3.41,1.44,0.78,180,Painting,HouseInterior,Desk,This is the interior of a wooden house with many objects inside. In your view there are several paintings on the wall; to its right is a kitchen table with meat; pumpkin; and cheese on it.
-05月07日,-3.41,1.44,0.78,225,Painting,HouseInterior,Cauldron,In the left of your view is a kitchen counter; to its right is a shelf with many books and potion bottles on it.
-06月07日,-3.41,1.44,0.78,270,Cauldron,Shelf,HouseInterior,A cauldron on a fire stove can be seen in the view. To its left is a bookshelf with books; potion bottles; and pumpkin toys.
-07月07日,-3.41,1.44,0.78,315,Cauldron,Wand,InstructionsPaper,Close to your right is a shelf with books and a magic wand; and further to your left is a cauldron on a fire stove.
-8-0,10,0.9,-0.73,0,Tree,Fence,Grass,You are on a hiking trail with fences on both sides on a sunny day. In your view is green grass and trees in a cartoon style.
-01月08日,10,0.9,-0.73,45,Tree,Fence,Grass,An outdoor hiking trail with fences on both sides extend to the right of your view. To the left of the trail are cartoon-style trees on a piece of grassland.
-02月08日,10,0.9,-0.73,90,Tree,Fence,Grass,A hiking trail with fences on both sides in the middle of your view extends beyond the horizon. On both sides of the trail are grass and trees.
-03月08日,10,0.9,-0.73,135,Tree,Fence,Grass,A hiking trail in a field extends to the left of your view. There are fences on both sides of the trail. To your right is a red book resting on the fence.
-04月08日,10,0.9,-0.73,180,Tree,Fence,House,You are facing the fence; grass; and trees from a hiking trail. A red book rests on the fence. Behind the fences; there seems to be a small house behind a tree.
-05月08日,10,0.9,-0.73,225,Tree,Fence,House,A hiking trail leads to a large house on your right with a wooden door. Beyond the fence of the hiking trail are trees and another smaller house. A red book rests on the fence in your front left.
-06月08日,10,0.9,-0.73,270,Tree,Fence,House,A hiking trail leads to a wooden door of a large house right in front of you. On both sides of the trail are fences; trees; and grass. A red book is on the fence to your left.
-07月08日,10,0.9,-0.73,315,Tree,Fence,House,A hiking trail leads to a wooden door of a large house in the left of your view. To the right of the trail are fences; trees; and grass.
+Camera Anchor,PositionX,PositionY,PositionZ,RotationY,Description
+Key-1,-1.9,1.4,-1.3,0,The scene in front of you shows the interior of a whimsical room with wooden walls; shelves filled with books; and various colorful objects; including a small green ghost-like figure floating near the window. Bright sunlight streams in through the oddly shaped windows; casting distinct shadows on the floor.
+Key-2,-1.9,1.4,-1.3,45,The scene in front of you shows a cozy; whimsical room with a wooden interior featuring an old-fashioned computer on a desk; a treasure chest; and various decorations; including a pumpkin face. Sunlight streams through the uniquely shaped windows; casting square shadows on the floor.
+Key-3,-1.9,1.4,-1.3,90,The scene in front of you shows a whimsical room with an old-fashioned computer on a desk; a treasure chest beside it; and a poster displaying instructions. The room features a brick furnace; various decorations; and shelves with items; all illuminated by sunlight streaming through the oddly shaped windows.
+Key-4,-1.9,1.4,-1.3,135,The scene in front of you shows a whimsical room with a desk holding an instructional poster; under a uniquely shaped window. In the background; shelves with various items and sunlight streaming through the window create a cozy; well-lit atmosphere.
+Key-5,-1.9,1.4,-1.3,180,The scene in front of you shows a narrow view of a whimsical room; focusing on a desk with an instructional poster and a window letting in sunlight. To the right; there are empty shelves; and beyond the window; a bright blue sky with yellow ground is visible.
+Key-6,-1.9,1.4,-1.3,225,The scene in front of you shows a close-up of a wooden shelf with an old-fashioned radio on it. The shelf is located in a whimsical room with muted lighting adding to the charming atmosphere.
+Key-7,-1.9,1.4,-1.3,270,The scene in front of you shows a close-up of a shelf holding an old-fashioned radio; with a whimsical room visible in the background. The room features a large; quirky furnace along with shelves filled with various items; illuminated by warm light.
+Key-8,-1.9,1.4,-1.3,315,The scene in front of you shows the interior of a whimsical room featuring shelves filled with books and colorful items; a ghost-like figure floating nearby; and a quirky furnace with a glowing fire. In the background; additional shelves hold more items; all illuminated by warm; inviting light streaming through uniquely shaped windows.
+Cauldron-1,-6.7,1.2,0.5,0,The scene in front of you depicts a close-up of a control panel with a rotary dial and an open hatch emitting a warm; yellow light; with a window in the background showing a partly cloudy sky.
+Cauldron-2,-6.7,1.2,0.5,45,"The scene in front of you shows a close-up of a control panel with a ""BREW!"" button; an open hatch glowing with yellow light; and a room in the background with colorful bottles on shelves and a fireplace."
+Cauldron-3,-6.7,1.2,0.5,90,The scene in front of you reveals a cozy; colorful room with wooden floors and shelves containing colorful bottles. The background features a fireplace; various decorations; and an artistically decorated table with art on the walls.
+Cauldron-4,-6.7,1.2,0.5,135,The scene in front of you shows a whimsical; colorful room with wooden floors; a table cluttered with various items; and a window revealing hot air balloons outside. The room is decorated with framed pictures; hanging lanterns; and a cozy fireplace in the background.
+Cauldron-5,-6.7,1.2,0.5,180,The scene in front of you features a table with various colorful objects; including pumpkins and fruit; standing beneath a window through which hot air balloons can be seen floating in the sky. The room is adorned with wooden walls and flooring; giving it a cozy atmosphere.
+Cauldron-6,-6.7,1.2,0.5,225,The scene in front of you showcases a shelf filled with colorful books and a small jack-o'-lantern. Next to it is a window with a view of hot air balloons against a blue sky; adding to the cozy atmosphere of the room.
+Cauldron-7,-6.7,1.2,0.5,270,The scene in front of you displays a shelf with books; a small jack-o'-lantern; and a glowing green potion bottle. Above the shelf; there is a poster featuring a diagram with instructions related to the potion.
+Cauldron-8,-6.7,1.2,0.5,315,The scene in front of you shows a close-up of a control panel with a dial; alongside an open glowing hatch. There is also a poster with diagram instructions and a potion bottle with a green liquid on a shelf nearby.
+Fireplace-1,1.8,0.8,0.9,0,The scene in front of you shows an open treasure chest containing a card with an image of a steak and some text or numbers. In the background; there's a window with a view of a sunset sky and a portion of a ladder.
+Fireplace-2,1.8,0.8,0.9,45,The scene in front of you shows an open treasure chest with a card depicting a steak and text or numbers inside. To the right; there's a smiling; animated flame character with bubbles above its head.
+Fireplace-3,1.8,0.8,0.9,90,The scene in front of you shows a smiling; animated flame character with bubbles above its head; situated in what appears to be an oven or fireplace structure with jagged edges. In the background; there is a window with a padlock and a shelf with kitchen utensils.
+Fireplace-4,1.8,0.8,0.9,135,The scene in front of you shows the interior of a room with wooden paneled walls and floor. On the left; the edge of an oven or fireplace with a smiling flame character is visible; in the background; a window with a padlock and a shelf holding bottles and books can also be seen.
+Fireplace-5,1.8,0.8,0.9,180,The scene in front of you shows a wooden-paneled room with shelves holding bottles and books; and two windows that provide an outdoor view of a sky with floating balloons or airships. To the right; there is an easel or table with papers on it.
+Fireplace-6,1.8,0.8,0.9,225,The scene in front of you shows an interior view of a wooden-paneled room with bright windows displaying sky and airships. The room features various furniture and decor; including a table with papers and a lamp; shelves with assorted items; and framed pictures on the walls.
+Fireplace-7,1.8,0.8,0.9,270,The scene in front of you shows a cozy; wooden-paneled room decorated with bright; decorative elements. The room features a table with papers and a lamp; wall shelves with various items; colorful framed pictures; and a round patterned rug on the floor. The view extends into another section of the room with more shelves; windows; and hanging lights.
+Fireplace-8,1.8,0.8,0.9,315,The scene in front of you shows a corner of a wooden-paneled room with large windows providing an outdoor view; including a distant airship. The foreground features part of a colorful round rug; and the background reveals more of the cozy interior extending to another room with shelves and a hanging light.
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,

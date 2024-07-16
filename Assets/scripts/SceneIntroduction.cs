@@ -147,7 +147,7 @@ public class SceneIntroduction : MonoBehaviour
                 prev_diff = (float)difference;
             }
         }
-        Debug.Log("Matching Camera Anchor:" + cameraAnchor + "Description:" + description);
+        Debug.Log("Matching Camera Anchor: " + cameraAnchor + " Description:" + description);
         OnLogEventAction?.Invoke(string.Format("anchor_scene_description,\"{0}\",\"{1}\"", cameraAnchor, description));
         await Task.Delay((int)(0));
         SpeechSynthesis.SpeakText(description);

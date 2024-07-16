@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CameraScreenshot : MonoBehaviour
 {
-    public int width = 1920;  // Screenshot width
-    public int height = 1080; // Screenshot height
+    public int width = 960;  // Screenshot width
+    public int height = 540; // Screenshot height
     public string screenshotPath = "Screenshots/"; // Path to save the screenshots
+    public Vector3 cameraPosition = new Vector3(0f, 0f, 0f);
 
     private Camera mainCamera;
     private int screenshotCount = 0;
@@ -22,7 +23,8 @@ public class CameraScreenshot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             // Set camera position and orientation
-            mainCamera.transform.position = new Vector3(10f, 0.9f, -0.73f); // Example position
+            mainCamera.transform.position = cameraPosition; // Example position
+            //mainCamera.transform.position = new Vector3(0f, 0f, 0f); // Example position
             mainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 0f); // Example rotation
             CaptureScreenshot();
 

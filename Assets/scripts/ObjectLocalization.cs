@@ -15,7 +15,7 @@ public class ObjectLocalization : MonoBehaviour
 {
     private GameObject EnVisionVR;
     private bool isFound = false;
-    private bool previousFound = false;
+    private bool previousFound = false;    
     private GameObject CameraController;
     SpeechSynthesis SpeechSynthesis;
     SceneIntroduction SceneIntroduction;
@@ -352,7 +352,7 @@ public class ObjectLocalization : MonoBehaviour
             if (isFound && !previousFound)
             {
                 previousFound = isFound;
-                rightHand.SendHapticImpulse(0.5f, 1f);
+                rightHand.SendHapticImpulse(0.5f, 0.5f);
                 //SpeechSynthesis.SpeakText("Grabbing " + virtualObjectTransform.name.Replace("_", " "));
                 //await Task.Delay(3000);
                 isFound = false;
@@ -369,6 +369,20 @@ public class ObjectLocalization : MonoBehaviour
                 }
                 //await Task.Delay(3000);
                 //SpeechRecognition.cancelActivate = true;
+
+                List<IXRSelectInteractable> interactables = controller.GetComponent<XRDirectInteractor>().interactablesSelected;
+                if (interactables.Count > 0)
+                {
+                    string grabbedObjectName = interactables[0].transform.gameObject.name;
+                    string targetObjectName = virtualObjectTransform.gameObject.name;
+                    //Debug.Log(grabbedObjectName + " : " + targetObjectName);
+                    if (grabbedObjectName == targetObjectName)
+                    {
+                        isTriggered = false;
+                        SpeechSynthesis.SpeakText("Holding " + targetObjectName.Replace("_", " "));
+                        OnLogEventAction?.Invoke(string.Format("holding_object,{0}", targetObjectName));
+                    }                    
+                }
             }
 
             if (distanceToObject < 0.12f && !isFound)

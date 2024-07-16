@@ -241,33 +241,36 @@ public class CameraFieldOfView : MonoBehaviour
                     currentTransform = currentTransform.parent;
                     path = currentTransform.name + "/" + path;
                 }
-                
+
+                await Task.Delay((int)(2100));
+                soundController.PlayAudioClip("Sweet Notification", obj.transform.position);
+
                 //Debug.LogError("Position for" + obj.name + ": " + obj.transform.position);
-                if (currentTransform.name == "Interactables")
-                {
-                    await Task.Delay((int)(2100));
-                    soundController.PlayAudioClip("Positive Notification", obj.transform.position);
-                }
-                else if (currentTransform.name == "Interior")
-                {
-                    await Task.Delay((int)(2100));
-                    soundController.PlayAudioClip("Magic Spell", obj.transform.position);
-                }
-                else if (currentTransform.name == "Potions")
-                {
-                    await Task.Delay((int)(2100));
-                    soundController.PlayAudioClip("Magic", obj.transform.position);
-                }
-                else if (currentTransform.name == "Exterior")
-                {
-                    await Task.Delay((int)(2100));
-                    soundController.PlayAudioClip("Confirm", obj.transform.position);
-                }
-                else
-                {
-                    await Task.Delay((int)(2100));
-                    soundController.PlayAudioClip("Sweet Notification", obj.transform.position);
-                }
+                //if (currentTransform.name == "Interactables")
+                //{
+                //    await Task.Delay((int)(2100));
+                //    soundController.PlayAudioClip("Positive Notification", obj.transform.position);
+                //}
+                //else if (currentTransform.name == "Interior")
+                //{
+                //    await Task.Delay((int)(2100));
+                //    soundController.PlayAudioClip("Magic Spell", obj.transform.position);
+                //}
+                //else if (currentTransform.name == "Potions")
+                //{
+                //    await Task.Delay((int)(2100));
+                //    soundController.PlayAudioClip("Magic", obj.transform.position);
+                //}
+                //else if (currentTransform.name == "Exterior")
+                //{
+                //    await Task.Delay((int)(2100));
+                //    soundController.PlayAudioClip("Confirm", obj.transform.position);
+                //}
+                //else
+                //{
+                //    await Task.Delay((int)(2100));
+                //    soundController.PlayAudioClip("Sweet Notification", obj.transform.position);
+                //}
 
                 string objname = objectsInFieldOfView[i].name;
                 Debug.Log("Sound of " + objname);

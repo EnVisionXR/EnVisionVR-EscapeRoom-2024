@@ -163,13 +163,15 @@ public class EnVisionManager : MonoBehaviour
         
         if (anchorId == 1)
         {
-            //anchorT = GameObject.Find("TeleportAnchors/Teleportation Anchor (7)").transform;
-            cameraOffet.position = new Vector3(-6.689f, yOffset, 0.341f);
+            // Key
+            //anchorT = GameObject.Find("TeleportAnchors/Teleportation Anchor (6)").transform;            
+            cameraOffet.position = new Vector3(-1.812f, yOffset, -1.425f);
         }
         else if (anchorId == 2)
         {
+            // Cauldron
             //anchorT = GameObject.Find("TeleportAnchors/Teleportation Anchor (4)").transform;
-            cameraOffet.position = new Vector3(1.83f, yOffset, 0.918f);            
+            cameraOffet.position = new Vector3(-6.689f, yOffset, 0.341f);            
         }
     }
 

@@ -56,7 +56,7 @@
               "position": {
                 "x": 0.0,
                 "y": 0.0,
-                "z": 0.0
+                "z": 1.2
               },
               "rotation": {
                 "x": 0.0,
@@ -80,7 +80,7 @@
                   "position": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0
+                    "z": 1.2
                   },
                   "rotation": {
                     "x": 0.0,
@@ -172,7 +172,7 @@
                   "position": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0
+                    "z": 1.2
                   },
                   "rotation": {
                     "x": 0.0,
@@ -331,7 +331,7 @@
                       "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 0.0
+                        "z": 1.2
                       },
                       "rotation": {
                         "x": 0.0,
@@ -355,7 +355,7 @@
                       "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": -0.02
+                        "z": 1.18000007
                       },
                       "rotation": {
                         "x": 0.0,
@@ -379,7 +379,7 @@
                       "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 0.0
+                        "z": 1.2
                       },
                       "rotation": {
                         "x": 0.0,
@@ -441,7 +441,7 @@
                   "position": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0
+                    "z": 1.2
                   },
                   "rotation": {
                     "x": 0.0,
@@ -613,7 +613,7 @@
                       "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 0.0
+                        "z": 1.2
                       },
                       "rotation": {
                         "x": 0.0,
@@ -637,7 +637,7 @@
                       "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": -0.02
+                        "z": 1.18000007
                       },
                       "rotation": {
                         "x": 0.0,
@@ -661,7 +661,7 @@
                       "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 0.0
+                        "z": 1.2
                       },
                       "rotation": {
                         "x": 0.0,
@@ -723,7 +723,7 @@
                   "position": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0
+                    "z": 1.2
                   },
                   "rotation": {
                     "x": 0.0,
@@ -932,7 +932,7 @@
                       "position": {
                         "x": 0.03,
                         "y": 0.02,
-                        "z": 0.07
+                        "z": 1.2700001
                       },
                       "rotation": {
                         "x": 0.0,
@@ -958,7 +958,7 @@
                   "position": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0
+                    "z": 1.2
                   },
                   "rotation": {
                     "x": 0.0,
@@ -1167,7 +1167,7 @@
                       "position": {
                         "x": 0.04,
                         "y": 0.01999998,
-                        "z": -0.03
+                        "z": 1.17000008
                       },
                       "rotation": {
                         "x": 0.0,
@@ -1193,7 +1193,7 @@
                   "position": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0
+                    "z": 1.2
                   },
                   "rotation": {
                     "x": 0.0,
@@ -1402,7 +1402,7 @@
                       "position": {
                         "x": 0.019,
                         "y": 0.001,
-                        "z": 0.047
+                        "z": 1.2470001
                       },
                       "rotation": {
                         "x": 0.0,
@@ -1426,7 +1426,7 @@
                       "position": {
                         "x": 0.019,
                         "y": 0.001,
-                        "z": 0.047
+                        "z": 1.2470001
                       },
                       "rotation": {
                         "x": 0.0,
@@ -1452,7 +1452,7 @@
                   "position": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0
+                    "z": 1.2
                   },
                   "rotation": {
                     "x": 0.0,
@@ -1661,7 +1661,7 @@
                       "position": {
                         "x": 0.019,
                         "y": 0.001,
-                        "z": 0.047
+                        "z": 1.2470001
                       },
                       "rotation": {
                         "x": 0.0,
@@ -1685,7 +1685,7 @@
                       "position": {
                         "x": 0.019,
                         "y": 0.001,
-                        "z": 0.047
+                        "z": 1.2470001
                       },
                       "rotation": {
                         "x": 0.0,
@@ -1751,6 +1751,14 @@
           "m_ProbeAnchor": "null",
           "m_LightProbeVolumeOverride": "null",
           "m_LightmapParameters": "null"
+        },
+        {
+          "type": "UnityEngine.MeshCollider",
+          "m_Material": "null",
+          "m_IsTrigger": false,
+          "m_Convex": false,
+          "m_CookingOptions": 30,
+          "m_Mesh": "PlantUmbrella"
         }
       ]
     },
@@ -1799,6 +1807,14 @@
           "m_ProbeAnchor": "null",
           "m_LightProbeVolumeOverride": "null",
           "m_LightmapParameters": "null"
+        },
+        {
+          "type": "UnityEngine.MeshCollider",
+          "m_Material": "null",
+          "m_IsTrigger": false,
+          "m_Convex": false,
+          "m_CookingOptions": 30,
+          "m_Mesh": "PlantPot"
         }
       ]
     },
@@ -1809,8 +1825,8 @@
         {
           "type": "UnityEngine.Transform",
           "position": {
-            "x": 0.227441981,
-            "y": 0.514,
+            "x": 0.1867,
+            "y": 0.511,
             "z": 1.327
           },
           "rotation": {
@@ -1829,601 +1845,129 @@
           "m_Mass": 1.0,
           "m_Drag": 0.0,
           "m_AngularDrag": 0.05,
-          "m_UseGravity": false,
-          "m_IsKinematic": true,
+          "m_UseGravity": true,
+          "m_IsKinematic": false,
           "m_Interpolate": "None",
           "m_CollisionDetection": "Discrete"
+        },
+        {
+          "type": "XROffsetGrabbable",
+          "m_InteractionManager": "null",
+          "m_Colliders": null,
+          "size": null,
+          "m_InteractionLayerMask": null,
+          "m_InteractionLayers": null,
+          "m_Bits": 1,
+          "m_DistanceCalculationMode": "ColliderPosition",
+          "m_SelectMode": "Single",
+          "m_FocusMode": "Single",
+          "m_CustomReticle": "null",
+          "m_AllowGazeInteraction": false,
+          "m_AllowGazeSelect": false,
+          "m_OverrideGazeTimeToSelect": false,
+          "m_GazeTimeToSelect": 0.5,
+          "m_OverrideTimeToAutoDeselectGaze": false,
+          "m_TimeToAutoDeselectGaze": 3.0,
+          "m_AllowGazeAssistance": false,
+          "m_FirstHoverEntered": null,
+          "m_PersistentCalls": null,
+          "m_Calls": null,
+          "m_LastHoverExited": null,
+          "m_HoverEntered": null,
+          "m_HoverExited": null,
+          "m_FirstSelectEntered": null,
+          "m_LastSelectExited": null,
+          "m_SelectEntered": null,
+          "m_SelectExited": null,
+          "m_FirstFocusEntered": null,
+          "m_LastFocusExited": null,
+          "m_FocusEntered": null,
+          "m_FocusExited": null,
+          "m_Activated": null,
+          "m_Deactivated": null,
+          "m_StartingHoverFilters": null,
+          "m_StartingSelectFilters": null,
+          "m_StartingInteractionStrengthFilters": null,
+          "m_OnFirstHoverEntered": null,
+          "m_OnLastHoverExited": null,
+          "m_OnHoverEntered": null,
+          "m_OnHoverExited": null,
+          "m_OnSelectEntered": null,
+          "m_OnSelectExited": null,
+          "m_OnSelectCanceled": null,
+          "m_OnActivate": null,
+          "m_OnDeactivate": null,
+          "m_AttachTransform": "null",
+          "m_SecondaryAttachTransform": "null",
+          "m_UseDynamicAttach": false,
+          "m_MatchAttachPosition": true,
+          "m_MatchAttachRotation": true,
+          "m_SnapToColliderVolume": true,
+          "m_ReinitializeDynamicAttachEverySingleGrab": true,
+          "m_AttachEaseInTime": 0.15,
+          "m_MovementType": "Instantaneous",
+          "m_VelocityDamping": 1.0,
+          "m_VelocityScale": 1.0,
+          "m_AngularVelocityDamping": 1.0,
+          "m_AngularVelocityScale": 1.0,
+          "m_TrackPosition": true,
+          "m_SmoothPosition": false,
+          "m_SmoothPositionAmount": 8.0,
+          "m_TightenPosition": 0.1,
+          "m_TrackRotation": true,
+          "m_SmoothRotation": false,
+          "m_SmoothRotationAmount": 8.0,
+          "m_TightenRotation": 0.1,
+          "m_TrackScale": true,
+          "m_SmoothScale": false,
+          "m_SmoothScaleAmount": 8.0,
+          "m_TightenScale": 0.1,
+          "m_ThrowOnDetach": true,
+          "m_ThrowSmoothingDuration": 0.25,
+          "m_ThrowSmoothingCurve": null,
+          "m_ThrowVelocityScale": 1.5,
+          "m_ThrowAngularVelocityScale": 0.25,
+          "m_ForceGravityOnDetach": false,
+          "m_RetainTransformParent": true,
+          "m_AttachPointCompatibilityMode": "Default",
+          "m_StartingSingleGrabTransformers": null,
+          "m_StartingMultipleGrabTransformers": null,
+          "m_AddDefaultGrabTransformers": true
+        },
+        {
+          "type": "UnityEngine.MeshCollider",
+          "m_Material": "null",
+          "m_IsTrigger": false,
+          "m_Convex": true,
+          "m_CookingOptions": 30,
+          "m_Mesh": "cup"
+        },
+        {
+          "type": "UnityEngine.MeshRenderer",
+          "m_CastShadows": "On",
+          "m_ReceiveShadows": true,
+          "m_DynamicOccludee": true,
+          "m_StaticShadowCaster": false,
+          "m_MotionVectors": "Per Object Motion",
+          "m_LightProbeUsage": 1,
+          "m_ReflectionProbeUsage": 1,
+          "m_RayTracingMode": 2,
+          "m_RayTraceProcedural": false,
+          "m_RenderingLayerMask": 1,
+          "m_RendererPriority": 0,
+          "m_Materials": null,
+          "size": null,
+          "data": "mugMaterial",
+          "m_ProbeAnchor": "null",
+          "m_LightProbeVolumeOverride": "null",
+          "m_LightmapParameters": "null"
+        },
+        {
+          "type": "UnityEngine.MeshFilter",
+          "m_Mesh": "cup"
         }
       ],
       "children": [
-        {
-          "name": "HandGrabInteractable",
-          "type": "GameObject",
-          "components": [
-            {
-              "type": "UnityEngine.Transform",
-              "position": {
-                "x": 0.296863854,
-                "y": 0.5308911,
-                "z": 1.217662
-              },
-              "rotation": {
-                "x": 69.17645,
-                "y": 52.2019463,
-                "z": 323.689728
-              },
-              "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-              }
-            }
-          ],
-          "children": [
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.296863854,
-                    "y": 0.5308911,
-                    "z": 1.217662
-                  },
-                  "rotation": {
-                    "x": 69.17645,
-                    "y": 52.2019463,
-                    "z": 323.689728
-                  },
-                  "scale": {
-                    "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.294481456,
-                    "y": 0.533116,
-                    "z": 1.23904347
-                  },
-                  "rotation": {
-                    "x": 69.17645,
-                    "y": 52.2019463,
-                    "z": 323.689728
-                  },
-                  "scale": {
-                    "x": 0.8,
-                    "y": 0.8000001,
-                    "z": 0.8
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.3047009,
-                    "y": 0.5286862,
-                    "z": 1.19809878
-                  },
-                  "rotation": {
-                    "x": 69.17645,
-                    "y": 52.2019463,
-                    "z": 323.689728
-                  },
-                  "scale": {
-                    "x": 1.20000029,
-                    "y": 1.2,
-                    "z": 1.20000017
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "HandGrabInteractable",
-          "type": "GameObject",
-          "components": [
-            {
-              "type": "UnityEngine.Transform",
-              "position": {
-                "x": 0.255363315,
-                "y": 0.6591183,
-                "z": 1.24345
-              },
-              "rotation": {
-                "x": 9.870719,
-                "y": 79.13283,
-                "z": 19.1397381
-              },
-              "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-              }
-            }
-          ],
-          "children": [
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.255363315,
-                    "y": 0.6591183,
-                    "z": 1.24345
-                  },
-                  "rotation": {
-                    "x": 9.870719,
-                    "y": 79.13283,
-                    "z": 19.1397381
-                  },
-                  "scale": {
-                    "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.250061274,
-                    "y": 0.6406284,
-                    "z": 1.25931132
-                  },
-                  "rotation": {
-                    "x": 9.87072,
-                    "y": 79.13283,
-                    "z": 19.1397381
-                  },
-                  "scale": {
-                    "x": 0.799999952,
-                    "y": 0.800000131,
-                    "z": 0.800000131
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.26071012,
-                    "y": 0.6720938,
-                    "z": 1.227574
-                  },
-                  "rotation": {
-                    "x": 9.87072,
-                    "y": 79.13283,
-                    "z": 19.1397381
-                  },
-                  "scale": {
-                    "x": 1.2,
-                    "y": 1.20000017,
-                    "z": 1.20000017
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "HandGrabInteractable",
-          "type": "GameObject",
-          "components": [
-            {
-              "type": "UnityEngine.Transform",
-              "position": {
-                "x": 0.07895486,
-                "y": 0.5113016,
-                "z": 1.37482953
-              },
-              "rotation": {
-                "x": 77.32913,
-                "y": 173.636932,
-                "z": 303.266876
-              },
-              "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-              }
-            }
-          ],
-          "children": [
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.07895486,
-                    "y": 0.5113016,
-                    "z": 1.37482953
-                  },
-                  "rotation": {
-                    "x": 77.32913,
-                    "y": 173.636932,
-                    "z": 303.266876
-                  },
-                  "scale": {
-                    "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.0970751047,
-                    "y": 0.517133653,
-                    "z": 1.36425185
-                  },
-                  "rotation": {
-                    "x": 77.32913,
-                    "y": 173.636932,
-                    "z": 303.266876
-                  },
-                  "scale": {
-                    "x": 0.799999952,
-                    "y": 0.799999952,
-                    "z": 0.7999999
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.05781874,
-                    "y": 0.5011039,
-                    "z": 1.38553166
-                  },
-                  "rotation": {
-                    "x": 77.32913,
-                    "y": 173.636932,
-                    "z": 303.266876
-                  },
-                  "scale": {
-                    "x": 1.20000017,
-                    "y": 1.2,
-                    "z": 1.2
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "HandGrabInteractable_mirror",
-          "type": "GameObject",
-          "components": [
-            {
-              "type": "UnityEngine.Transform",
-              "position": {
-                "x": 0.296863854,
-                "y": 0.5308911,
-                "z": 1.217662
-              },
-              "rotation": {
-                "x": 290.823547,
-                "y": 62.9727669,
-                "z": 143.689728
-              },
-              "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-              }
-            }
-          ],
-          "children": [
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.296863854,
-                    "y": 0.5308911,
-                    "z": 1.217662
-                  },
-                  "rotation": {
-                    "x": 290.823547,
-                    "y": 62.9727669,
-                    "z": 143.689728
-                  },
-                  "scale": {
-                    "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.294481456,
-                    "y": 0.533116,
-                    "z": 1.23904347
-                  },
-                  "rotation": {
-                    "x": 290.823547,
-                    "y": 53.16958,
-                    "z": 143.689743
-                  },
-                  "scale": {
-                    "x": 0.800000131,
-                    "y": 0.800000131,
-                    "z": 0.800000131
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.3047009,
-                    "y": 0.5286862,
-                    "z": 1.19809878
-                  },
-                  "rotation": {
-                    "x": 290.823547,
-                    "y": 65.9240341,
-                    "z": 143.689728
-                  },
-                  "scale": {
-                    "x": 1.20000052,
-                    "y": 1.20000052,
-                    "z": 1.20000052
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "HandGrabInteractable_mirror",
-          "type": "GameObject",
-          "components": [
-            {
-              "type": "UnityEngine.Transform",
-              "position": {
-                "x": 0.255363345,
-                "y": 0.659118235,
-                "z": 1.24345
-              },
-              "rotation": {
-                "x": 350.1293,
-                "y": 63.90918,
-                "z": 199.13974
-              },
-              "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-              }
-            }
-          ],
-          "children": [
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.255363345,
-                    "y": 0.659118235,
-                    "z": 1.24345
-                  },
-                  "rotation": {
-                    "x": 350.1293,
-                    "y": 63.90918,
-                    "z": 199.13974
-                  },
-                  "scale": {
-                    "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.250061274,
-                    "y": 0.6406284,
-                    "z": 1.25931132
-                  },
-                  "rotation": {
-                    "x": 350.129272,
-                    "y": 63.9113579,
-                    "z": 199.13974
-                  },
-                  "scale": {
-                    "x": 0.800000131,
-                    "y": 0.800000131,
-                    "z": 0.800000131
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.26071012,
-                    "y": 0.6720938,
-                    "z": 1.22757411
-                  },
-                  "rotation": {
-                    "x": 350.129272,
-                    "y": 63.866436,
-                    "z": 199.13974
-                  },
-                  "scale": {
-                    "x": 1.20000017,
-                    "y": 1.20000017,
-                    "z": 1.20000017
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "HandGrabInteractable_mirror",
-          "type": "GameObject",
-          "components": [
-            {
-              "type": "UnityEngine.Transform",
-              "position": {
-                "x": 0.0789549351,
-                "y": 0.5113016,
-                "z": 1.27917039
-              },
-              "rotation": {
-                "x": 282.670868,
-                "y": 186.363373,
-                "z": 123.266533
-              },
-              "scale": {
-                "x": 1.0,
-                "y": 1.0,
-                "z": 1.0
-              }
-            }
-          ],
-          "children": [
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.0789549351,
-                    "y": 0.5113016,
-                    "z": 1.27917039
-                  },
-                  "rotation": {
-                    "x": 282.670868,
-                    "y": 186.363373,
-                    "z": 123.266533
-                  },
-                  "scale": {
-                    "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.09707515,
-                    "y": 0.517133653,
-                    "z": 1.28974807
-                  },
-                  "rotation": {
-                    "x": 282.670868,
-                    "y": 186.363373,
-                    "z": 123.266533
-                  },
-                  "scale": {
-                    "x": 0.8,
-                    "y": 0.8,
-                    "z": 0.8
-                  }
-                }
-              ]
-            },
-            {
-              "name": "HandGrab Point",
-              "type": "GameObject",
-              "components": [
-                {
-                  "type": "UnityEngine.Transform",
-                  "position": {
-                    "x": 0.0578187853,
-                    "y": 0.5011039,
-                    "z": 1.26846826
-                  },
-                  "rotation": {
-                    "x": 282.670868,
-                    "y": 186.363373,
-                    "z": 123.266533
-                  },
-                  "scale": {
-                    "x": 1.20000029,
-                    "y": 1.20000029,
-                    "z": 1.20000029
-                  }
-                }
-              ]
-            }
-          ]
-        },
         {
           "name": "Visuals",
           "type": "GameObject",
@@ -2431,8 +1975,8 @@
             {
               "type": "UnityEngine.Transform",
               "position": {
-                "x": 0.227441981,
-                "y": 0.514,
+                "x": 0.1867,
+                "y": 0.511,
                 "z": 1.327
               },
               "rotation": {
@@ -2455,8 +1999,8 @@
                 {
                   "type": "UnityEngine.Transform",
                   "position": {
-                    "x": 0.227441981,
-                    "y": 0.514,
+                    "x": 0.1867,
+                    "y": 0.511,
                     "z": 1.327
                   },
                   "rotation": {
@@ -2479,8 +2023,8 @@
                     {
                       "type": "UnityEngine.Transform",
                       "position": {
-                        "x": 0.227441981,
-                        "y": 0.514,
+                        "x": 0.1867,
+                        "y": 0.511,
                         "z": 1.327
                       },
                       "rotation": {
@@ -2519,22 +2063,22 @@
                       "m_Mesh": "cup"
                     },
                     {
-                      "type": "UnityEngine.BoxCollider",
-                      "m_Material": "null",
-                      "m_IsTrigger": false,
-                      "m_Size": null,
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "m_Center": null
-                    },
-                    {
                       "type": "UnityEngine.MeshCollider",
                       "m_Material": "null",
                       "m_IsTrigger": false,
                       "m_Convex": true,
                       "m_CookingOptions": 30,
                       "m_Mesh": "cup"
+                    },
+                    {
+                      "type": "UnityEngine.Rigidbody",
+                      "m_Mass": 1.0,
+                      "m_Drag": 0.0,
+                      "m_AngularDrag": 0.05,
+                      "m_UseGravity": true,
+                      "m_IsKinematic": false,
+                      "m_Interpolate": "None",
+                      "m_CollisionDetection": "Continuous Speculative"
                     }
                   ]
                 }
@@ -2549,8 +2093,8 @@
             {
               "type": "UnityEngine.Transform",
               "position": {
-                "x": 0.227441981,
-                "y": 0.514,
+                "x": 0.1867,
+                "y": 0.511,
                 "z": 1.327
               },
               "rotation": {
@@ -2573,8 +2117,8 @@
                 {
                   "type": "UnityEngine.Transform",
                   "position": {
-                    "x": 0.227441981,
-                    "y": 0.514,
+                    "x": 0.1867,
+                    "y": 0.511,
                     "z": 1.327
                   },
                   "rotation": {
@@ -2622,8 +2166,8 @@
                 {
                   "type": "UnityEngine.Transform",
                   "position": {
-                    "x": 0.227441981,
-                    "y": 0.514,
+                    "x": 0.1867,
+                    "y": 0.511,
                     "z": 1.327
                   },
                   "rotation": {
@@ -3616,6 +3160,14 @@
                       "m_ProbeAnchor": "null",
                       "m_LightProbeVolumeOverride": "null",
                       "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "armchair_studio"
                     }
                   ]
                 },
@@ -3664,6 +3216,14 @@
                       "m_ProbeAnchor": "null",
                       "m_LightProbeVolumeOverride": "null",
                       "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "armchair_studio.001"
                     }
                   ]
                 },
@@ -3712,6 +3272,14 @@
                       "m_ProbeAnchor": "null",
                       "m_LightProbeVolumeOverride": "null",
                       "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "couch_studio"
                     }
                   ]
                 },
@@ -3808,6 +3376,14 @@
                       "m_ProbeAnchor": "null",
                       "m_LightProbeVolumeOverride": "null",
                       "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "grounRug"
                     }
                   ]
                 },
@@ -3856,6 +3432,14 @@
                       "m_ProbeAnchor": "null",
                       "m_LightProbeVolumeOverride": "null",
                       "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "Planter"
                     }
                   ]
                 },
@@ -3904,6 +3488,14 @@
                       "m_ProbeAnchor": "null",
                       "m_LightProbeVolumeOverride": "null",
                       "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": false,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "tripod lamp"
                     }
                   ]
                 },
@@ -3952,6 +3544,14 @@
                       "m_ProbeAnchor": "null",
                       "m_LightProbeVolumeOverride": "null",
                       "m_LightmapParameters": "null"
+                    },
+                    {
+                      "type": "UnityEngine.MeshCollider",
+                      "m_Material": "null",
+                      "m_IsTrigger": false,
+                      "m_Convex": true,
+                      "m_CookingOptions": 30,
+                      "m_Mesh": "traditional_coffee_table"
                     }
                   ]
                 },
@@ -4564,6 +4164,8 @@
           "readObjects": null,
           "size": null,
           "localizationMode": false,
+          "readobjectdecay": 0.05,
+          "dist_threshold": 8.0,
           "volume": 1.0,
           "spatialBlend": 1.0,
           "soundController": "null",
@@ -4609,7 +4211,7 @@
         },
         {
           "type": "SceneIntroduction",
-          "csvFilePath": "Assets/descriptions.csv",
+          "csvFilePath": "Screenshots/Practice Scene/descriptions-practice.csv",
           "isSpeaking_": false
         },
         {
@@ -4650,6 +4252,89 @@
           "panLevelCustomCurve": null,
           "spreadCustomCurve": null,
           "reverbZoneMixCustomCurve": null
+        }
+      ]
+    },
+    {
+      "name": "AudioSourceObject",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.131,
+            "y": 0.0,
+            "z": 1.78
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        {
+          "type": "UnityEngine.AudioSource",
+          "OutputAudioMixerGroup": "null",
+          "m_audioClip": "Sweet Notification",
+          "m_PlayOnAwake": true,
+          "m_Volume": 1.0,
+          "m_Pitch": 1.0,
+          "Loop": false,
+          "Mute": false,
+          "Spatialize": true,
+          "SpatializePostEffects": false,
+          "Priority": 128,
+          "DopplerLevel": 1.0,
+          "MinDistance": 1.0,
+          "MaxDistance": 500.0,
+          "Pan2D": 0.0,
+          "rolloffMode": "Logarithmic Rolloff",
+          "BypassEffects": false,
+          "BypassListenerEffects": false,
+          "BypassReverbZones": false,
+          "rolloffCustomCurve": null,
+          "panLevelCustomCurve": null,
+          "spreadCustomCurve": null,
+          "reverbZoneMixCustomCurve": null
+        }
+      ]
+    },
+    {
+      "name": "EnVisionVRPrep",
+      "type": "GameObject",
+      "components": [
+        {
+          "type": "UnityEngine.Transform",
+          "position": {
+            "x": 0.248645186,
+            "y": 0.7260392,
+            "z": 1.06994522
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        {
+          "type": "CameraScreenshot",
+          "width": 960,
+          "height": 540,
+          "screenshotPath": "Screenshots/Practice Scene/",
+          "cameraPosition": null,
+          "x": 0.0,
+          "y": 0.8,
+          "z": 0.8
         }
       ]
     }

@@ -43,7 +43,7 @@ def add_importance(data, hierarchy_level=0):
         if "name" in data and "base" in data["name"]:
             data["importance"] = 0
         if "hierarchy_level" in data:
-            if data["hierarchy_level"]>2:
+            if data["hierarchy_level"]>1:
                 data["importance"] = 0
         # if "name" in data:
         #     data["name"] = data["name"].replace("_", " ")
@@ -73,7 +73,7 @@ def add_description(data, hierarchy_level=0):
             add_description(item, hierarchy_level + 1)
 
 # Load JSON data from file
-with open('scene_graph.json') as file:
+with open('scene_graph_practice.json') as file:
     json_data = json.load(file)
 
 # Add "importance" and "hierarchy_level" properties
@@ -81,5 +81,5 @@ add_importance(json_data)
 add_description(json_data)
 
 # Save modified JSON data back to file
-with open('scene_graph_importance.json', 'w') as file:
+with open('scene_graph_importance_practice.json', 'w') as file:
     json.dump(json_data, file, indent=4)  # Add line breaks with indentation
